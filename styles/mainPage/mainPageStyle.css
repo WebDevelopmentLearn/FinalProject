@@ -1,0 +1,275 @@
+.text500 {
+  font-weight: 500;
+}
+
+.text600 {
+  font-weight: 600;
+}
+
+.text700 {
+  font-weight: 700;
+}
+
+.text800 {
+  font-weight: 800;
+}
+
+.text900 {
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* ================ START OF NAV ==================== */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3% 0 1%;
+}
+
+/* ======= LOGO CONTAINER START ======= */
+/* ======= LOGO CONTAINER END ======= */
+/* ======= SEARCH CONTAINER START ======= */
+/* ======= SEARCH CONTAINER START ======= */
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.searchContainer .searchForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.searchContainer #searchInput {
+  width: 20vw;
+  border-right: none;
+  outline: none;
+  padding: 12px 5px 12px 37px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px 0 0 8px;
+  font-size: 1.6rem;
+}
+.searchContainer #searchCityInput {
+  width: 20vw;
+  border-right: none;
+  outline: none;
+  padding: 12px 20px;
+  border: 1px solid #d9d9d9;
+  border-left: none;
+  border-right: none;
+  font-size: 1.6rem;
+}
+.searchContainer .searchLabel {
+  position: relative;
+}
+.searchContainer #searchIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+.searchContainer .searchBtn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #f65858;
+}
+
+/* ======= SEARCH CONTAINER END ======= */
+/* ======= RIGHT CONTAINER START ======= */
+.rightNavContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21px;
+}
+.rightNavContainer .switchLangBtn {
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.4rem;
+}
+.rightNavContainer a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.4rem;
+}
+.rightNavContainer .signUpBtn {
+  background-color: #00798a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+
+/* ======= RIGHT CONTAINER END ======= */
+/* ================ END OF NAV ==================== */
+/* ================ START OF MAIN PAGE ==================== */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======= ABOUT US CONTAINER START ======= */
+.aboutUsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 45px;
+}
+.aboutUsContainer .aboutUsInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+  width: 50%;
+}
+.aboutUsContainer .aboutUsInfoContainer h1 {
+  font-size: 4.2rem;
+}
+.aboutUsContainer .aboutUsInfoContainer p {
+  font-size: 1.6rem;
+}
+.aboutUsContainer .aboutUsInfoContainer a {
+  background-color: #00798A;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* ======= ABOUT US CONTAINER END ======= */
+/* ======= EVENTS CONTAINER START ======= */
+.eventsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
+}
+.eventsContainer .leftEventContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.eventsContainer .leftEventContainer h3 {
+  font-size: 2.8rem;
+}
+.eventsContainer .leftEventContainer button {
+  background-color: rgba(151, 202, 209, 0.1215686275);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px 8px 12px;
+}
+.eventsContainer .leftEventContainer button span {
+  font-size: 2rem;
+  color: #00798A;
+}
+.eventsContainer .seeAllEventsContainer a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #00798A;
+}
+
+/* ======= EVENTS CONTAINER END ======= */
+/* ======= NEAR EVENTS CONTAINER START ======= */
+.nearEventsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: normal;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 24px 100px 0 100px;
+}
+.nearEventsContainer div {
+  padding-bottom: 10px;
+  max-width: 272px;
+  max-height: 400px;
+}
+.nearEventsContainer .eventInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+.nearEventsContainer .eventInfoContainer h4 {
+  font-size: 2rem;
+}
+.nearEventsContainer .eventInfoContainer p {
+  font-size: 1.4rem;
+  color: #212121;
+}
+.nearEventsContainer .eventInfoContainer .eventLocationInfo {
+  color: #707070;
+}
+.nearEventsContainer .eventInfoContainer .eventDateInfo:before {
+  content: url("/assets/mainPage/main/calendar_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo {
+  font-size: 1.6rem;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before {
+  content: url("/assets/mainPage/main/check_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo {
+  font-size: 1.6rem;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before {
+  content: url("/assets/mainPage/main/ticket_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* ======= NEAR EVENTS CONTAINER END ======= */
+/* ================ END OF MAIN PAGE ==================== */
+
+/*# sourceMappingURL=mainPageStyle.css.map */

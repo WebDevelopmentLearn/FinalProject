@@ -1,0 +1,91 @@
+@media screen and (max-width: 768px) {
+  /* ================ START OF NAV ==================== */
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    margin: 0;
+  }
+  /* ======= LOGO CONTAINER START ======= */
+  .logoContainer {
+    margin-left: 24px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  /* ======= LOGO CONTAINER END ======= */
+  /* ======= SEARCH CONTAINER START ======= */
+  .searchContainer {
+    grid-column: span 2;
+  }
+  .searchContainer #searchInput {
+    width: 80vw;
+    border-right: none;
+  }
+  .searchContainer #searchCityInput {
+    display: none;
+  }
+  /* ======= SEARCH CONTAINER END ======= */
+  /* ======= RIGHT CONTAINER START ======= */
+  .rightNavContainer {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+    margin-right: 8px;
+  }
+  .rightNavContainer a {
+    font-size: 1.2rem;
+  }
+  /* ======= RIGHT CONTAINER END ======= */
+  /* ================ END OF NAV ==================== */
+  /* ================ START OF MAIN PAGE ==================== */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutUsContainer {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .aboutUsContainer .aboutUsInfoContainer {
+    gap: 20px;
+    width: 100%;
+  }
+  .aboutUsContainer .aboutUsInfoContainer h1 {
+    font-size: 2.5rem;
+  }
+  .aboutUsContainer .aboutUsInfoContainer p {
+    font-size: 1.2rem;
+    line-height: 24px;
+  }
+  .aboutUsContainer .aboutUsInfoContainer a {
+    display: none;
+  }
+  .aboutUsContainer .aboutUsImgContainer img {
+    width: 240px;
+  }
+  /* ================ END OF MAIN PAGE ==================== */
+  /* ======= EVENTS CONTAINER START ======= */
+  .eventsContainer {
+    width: 100%;
+    justify-content: center;
+  }
+  .eventsContainer .leftEventContainer h3 {
+    font-size: 2rem;
+  }
+  .eventsContainer .leftEventContainer button span {
+    font-size: 1.4rem;
+  }
+  .eventsContainer .seeAllEventsContainer {
+    display: none;
+  }
+  /* ======= EVENTS CONTAINER END ======= */
+}
+
+/*# sourceMappingURL=mainPageMedia.css.map */
