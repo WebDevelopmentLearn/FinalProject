@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles/mainPage/mainPageStyle.css" />
+    <link rel="stylesheet" href="styles/mainPage/mainPageMedia.css" />
+    <!-- Подключение стилей -->
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Подключение шрифтов -->
+    <title>Main Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logoContainer">
+        <a href="#">
+          <img src="./assets/logo.svg" alt="logo" />
+        </a>
+      </div>
+      <div class="searchContainer">
+        <form class="searchForm" action="">
+          <label class="searchLabel" for="searchInput">
+            <input id="searchInput" name="search" type="search" placeholder="Search events" />
+            <img alt="search_icon" id="searchIcon" src="./assets/mainPage/navbar/search_icon.svg" />
+          </label>
+          <label class="searchCityLabel" for="searchCityInput">
+            <input id="searchCityInput" name="search" type="search" />
+          </label>
+          <button class="searchBtn">
+            <img alt="second_search_icon" src="./assets/mainPage/navbar/second_search_icon.svg" />
+          </button>
+        </form>
+      </div>
+      <div class="rightNavContainer">
+        <button class="switchLangBtn">
+          <img src="./assets/mainPage/navbar/lang_icon.svg" alt="lang_icon" />
+          <span class="text500">English</span>
+        </button>
+        <a class="text500" href="">Log in</a>
+        <button class="signUpBtn text500">Sign up</button>
+      </div>
+    </nav>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

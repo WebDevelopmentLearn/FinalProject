@@ -1,0 +1,55 @@
+@import "../mixins";
+
+@media screen and (max-width: 768px) {
+  /* ================ START OF NAV ==================== */
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    margin: 0;
+  }
+
+  /* ======= LOGO CONTAINER START ======= */
+
+  .logoContainer {
+    margin-left: 24px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  /* ======= LOGO CONTAINER END ======= */
+
+  /* ======= SEARCH CONTAINER START ======= */
+
+  .searchContainer {
+    grid-column: span 2;
+
+    #searchInput {
+      width: 80vw;
+      border-right: none;
+    }
+
+    #searchCityInput {
+      display: none;
+    }
+  }
+}
+
+/* ======= SEARCH CONTAINER END ======= */
+
+/* ======= RIGHT CONTAINER START ======= */
+
+.rightNavContainer {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  @include flexBox(row, space-evenly, center);
+  gap: 1px;
+  margin-right: 8px;
+
+  a {
+    font-size: 1.2rem;
+  }
+}
+/* ======= RIGHT CONTAINER END ======= */
+/* ================ END OF NAV ==================== */
