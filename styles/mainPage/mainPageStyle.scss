@@ -118,12 +118,14 @@ nav {
 
 main {
   @include flexBox(column, center, center);
+  padding: 0 10% 0 10%;
 }
 
 
 /* ======= ABOUT US CONTAINER START ======= */
 .aboutUsContainer {
-  @include flexBox(row, space-evenly, center);
+  @include flexBox(row, space-between, center);
+  width: 100%;
   //max-width: 1140px;
   //margin: 5% 10%;
   gap: 45px;
@@ -147,6 +149,7 @@ main {
       text-decoration: none;
       padding: 8px 16px;
       border-radius: 8px;
+      font-size: 1.6rem;
     }
   }
 }
@@ -157,7 +160,7 @@ main {
 .eventsContainer {
   @include flexBox(row, space-between, center);
   //max-width: 1140px;
-  width: 85vw;
+  width: 100%;
 
   .leftEventContainer {
     @include flexBox(row, space-between, center);
@@ -198,10 +201,13 @@ main {
 /* ======= NEAR EVENTS CONTAINER START ======= */
 
 .nearEventsContainer {
-  @include flexBox(row, space-around, normal);
+  @include flexBox(row, space-between, normal);
   flex-wrap: wrap;
-  gap: 25px;
-  margin: 24px 100px 0 100px;
+  gap: 36px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 36px;
+  //margin: 24px 100px 0 100px;
 
   div {
     padding-bottom: 10px;
@@ -255,5 +261,66 @@ main {
 
 /* ======= NEAR EVENTS CONTAINER END ======= */
 
+/* ======= UPCOMING EVENTS CONTAINER START ======= */
+.upcomingEventsContainer {
+  @extend .nearEventsContainer;
+  //justify-content: space-between;
+  //margin: 0;
+
+
+  //@include flexBox(row, space-around, normal);
+  //flex-wrap: wrap;
+  //gap: 25px;
+  //margin: 24px 100px 0 100px;
+  //
+  //div {
+  //  padding-bottom: 10px;
+  //  max-width: 272px;
+  //  max-height: 400px;
+  //}
+  //
+  //.eventInfoContainer {
+  //  @include flexBox(column, center, start);
+  //  gap: 10px;
+  //  h4 {
+  //    font-size: 2.0rem;
+  //  }
+  //
+  //  p {
+  //    font-size: 1.4rem;
+  //    color: #212121;
+  //  }
+  //
+  //  .eventLocationInfo {
+  //    color: #707070;
+  //  }
+  //
+  //  .eventDateInfo:before {
+  //    content: url("/assets/mainPage/main/calendar_icon.svg");
+  //    @include iconInlineAlign();
+  //  }
+  //
+  //  .additionEventInfoContainer {
+  //    @include flexBox(row, start, center);
+  //    gap: 16px;
+  //    .membersWaitingInfo {
+  //      font-size: 1.6rem;
+  //      &:before {
+  //        content: url("/assets/mainPage/main/check_icon.svg");
+  //        @include iconInlineAlign();
+  //      }
+  //    }
+  //
+  //    .paidInfo {
+  //      font-size: 1.6rem;
+  //      &:before {
+  //        content: url("/assets/mainPage/main/ticket_icon.svg");
+  //        @include iconInlineAlign();
+  //      }
+  //    }
+  //  }
+  //}
+}
+/* ======= UPCOMING EVENTS CONTAINER END ======= */
 
 /* ================ END OF MAIN PAGE ==================== */

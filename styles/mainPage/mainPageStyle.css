@@ -132,14 +132,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10% 0 10%;
 }
 
 /* ======= ABOUT US CONTAINER START ======= */
 .aboutUsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   gap: 45px;
 }
 .aboutUsContainer .aboutUsInfoContainer {
@@ -162,6 +164,7 @@ main {
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
+  font-size: 1.6rem;
 }
 
 /* ======= ABOUT US CONTAINER END ======= */
@@ -171,7 +174,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 85vw;
+  width: 100%;
 }
 .eventsContainer .leftEventContainer {
   display: flex;
@@ -206,63 +209,65 @@ main {
 
 /* ======= EVENTS CONTAINER END ======= */
 /* ======= NEAR EVENTS CONTAINER START ======= */
-.nearEventsContainer {
+.nearEventsContainer, .upcomingEventsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: normal;
   flex-wrap: wrap;
-  gap: 25px;
-  margin: 24px 100px 0 100px;
+  gap: 36px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 36px;
 }
-.nearEventsContainer div {
+.nearEventsContainer div, .upcomingEventsContainer div {
   padding-bottom: 10px;
   max-width: 272px;
   max-height: 400px;
 }
-.nearEventsContainer .eventInfoContainer {
+.nearEventsContainer .eventInfoContainer, .upcomingEventsContainer .eventInfoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 10px;
 }
-.nearEventsContainer .eventInfoContainer h4 {
+.nearEventsContainer .eventInfoContainer h4, .upcomingEventsContainer .eventInfoContainer h4 {
   font-size: 2rem;
 }
-.nearEventsContainer .eventInfoContainer p {
+.nearEventsContainer .eventInfoContainer p, .upcomingEventsContainer .eventInfoContainer p {
   font-size: 1.4rem;
   color: #212121;
 }
-.nearEventsContainer .eventInfoContainer .eventLocationInfo {
+.nearEventsContainer .eventInfoContainer .eventLocationInfo, .upcomingEventsContainer .eventInfoContainer .eventLocationInfo {
   color: #707070;
 }
-.nearEventsContainer .eventInfoContainer .eventDateInfo:before {
+.nearEventsContainer .eventInfoContainer .eventDateInfo:before, .upcomingEventsContainer .eventInfoContainer .eventDateInfo:before {
   content: url("/assets/mainPage/main/calendar_icon.svg");
   vertical-align: middle;
   display: inline-block;
   margin-right: 5px;
 }
-.nearEventsContainer .eventInfoContainer .additionEventInfoContainer {
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   gap: 16px;
 }
-.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo {
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo {
   font-size: 1.6rem;
 }
-.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before {
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before {
   content: url("/assets/mainPage/main/check_icon.svg");
   vertical-align: middle;
   display: inline-block;
   margin-right: 5px;
 }
-.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo {
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo {
   font-size: 1.6rem;
 }
-.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before {
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before {
   content: url("/assets/mainPage/main/ticket_icon.svg");
   vertical-align: middle;
   display: inline-block;
@@ -270,6 +275,8 @@ main {
 }
 
 /* ======= NEAR EVENTS CONTAINER END ======= */
+/* ======= UPCOMING EVENTS CONTAINER START ======= */
+/* ======= UPCOMING EVENTS CONTAINER END ======= */
 /* ================ END OF MAIN PAGE ==================== */
 
 /*# sourceMappingURL=mainPageStyle.css.map */
