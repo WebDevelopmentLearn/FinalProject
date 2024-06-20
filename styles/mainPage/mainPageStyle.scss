@@ -123,10 +123,10 @@ main {
 
 /* ======= ABOUT US CONTAINER START ======= */
 .aboutUsContainer {
-  @include flexBox(row, center, center);
-  max-width: 1140px;
-  margin: 5% 10%;
-  gap: 55px;
+  @include flexBox(row, space-evenly, center);
+  //max-width: 1140px;
+  //margin: 5% 10%;
+  gap: 45px;
 
 
   .aboutUsInfoContainer {
@@ -156,8 +156,8 @@ main {
 /* ======= EVENTS CONTAINER START ======= */
 .eventsContainer {
   @include flexBox(row, space-between, center);
-  max-width: 1140px;
-  width: 66vw;
+  //max-width: 1140px;
+  width: 85vw;
 
   .leftEventContainer {
     @include flexBox(row, space-between, center);
@@ -198,9 +198,10 @@ main {
 /* ======= NEAR EVENTS CONTAINER START ======= */
 
 .nearEventsContainer {
-  @include flexBox(row, center, center);
+  @include flexBox(row, space-around, normal);
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 25px;
+  margin: 24px 100px 0 100px;
 
   div {
     padding-bottom: 10px;
@@ -226,6 +227,7 @@ main {
 
     .eventDateInfo:before {
       content: url("/assets/mainPage/main/calendar_icon.svg");
+      @include iconInlineAlign();
     }
 
     .additionEventInfoContainer {
@@ -235,6 +237,7 @@ main {
         font-size: 1.6rem;
         &:before {
           content: url("/assets/mainPage/main/check_icon.svg");
+           @include iconInlineAlign();
         }
       }
 
@@ -242,6 +245,7 @@ main {
         font-size: 1.6rem;
         &:before {
           content: url("/assets/mainPage/main/ticket_icon.svg");
+           @include iconInlineAlign();
         }
       }
     }

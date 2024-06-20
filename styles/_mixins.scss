@@ -4,3 +4,9 @@
   justify-content: $justifyValue;
   align-items: $alignValue;
 }
+
+@mixin iconInlineAlign() {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
