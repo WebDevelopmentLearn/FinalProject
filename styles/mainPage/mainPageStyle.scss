@@ -264,63 +264,40 @@ main {
 /* ======= UPCOMING EVENTS CONTAINER START ======= */
 .upcomingEventsContainer {
   @extend .nearEventsContainer;
-  //justify-content: space-between;
-  //margin: 0;
-
-
-  //@include flexBox(row, space-around, normal);
-  //flex-wrap: wrap;
-  //gap: 25px;
-  //margin: 24px 100px 0 100px;
-  //
-  //div {
-  //  padding-bottom: 10px;
-  //  max-width: 272px;
-  //  max-height: 400px;
-  //}
-  //
-  //.eventInfoContainer {
-  //  @include flexBox(column, center, start);
-  //  gap: 10px;
-  //  h4 {
-  //    font-size: 2.0rem;
-  //  }
-  //
-  //  p {
-  //    font-size: 1.4rem;
-  //    color: #212121;
-  //  }
-  //
-  //  .eventLocationInfo {
-  //    color: #707070;
-  //  }
-  //
-  //  .eventDateInfo:before {
-  //    content: url("/assets/mainPage/main/calendar_icon.svg");
-  //    @include iconInlineAlign();
-  //  }
-  //
-  //  .additionEventInfoContainer {
-  //    @include flexBox(row, start, center);
-  //    gap: 16px;
-  //    .membersWaitingInfo {
-  //      font-size: 1.6rem;
-  //      &:before {
-  //        content: url("/assets/mainPage/main/check_icon.svg");
-  //        @include iconInlineAlign();
-  //      }
-  //    }
-  //
-  //    .paidInfo {
-  //      font-size: 1.6rem;
-  //      &:before {
-  //        content: url("/assets/mainPage/main/ticket_icon.svg");
-  //        @include iconInlineAlign();
-  //      }
-  //    }
-  //  }
-  //}
 }
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+/* ======= JOIN CONTAINER START ======= */
+.joinContainer {
+  @include flexBox(row, space-between, center);
+  background-color: #97CAD114;
+  width: 100%;
+  border-radius: 8px;
+  padding: 36px 56px;
+  margin-bottom: 64px;
+
+  .joinLeftContainer {
+    @include flexBox(column, center, start);
+    gap: 16px;
+    width: 50%;
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    button {
+      border: none;
+      background-color: #E32359;
+      color: #ffffff;
+      padding: 8px 66px;
+      border-radius: 8px;
+
+    }
+  }
+}
+/* ======= JOIN CONTAINER END ======= */
 
 /* ================ END OF MAIN PAGE ==================== */

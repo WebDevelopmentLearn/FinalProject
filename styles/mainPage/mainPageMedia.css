@@ -86,18 +86,33 @@
     display: none;
   }
   /* ======= EVENTS CONTAINER END ======= */
+  /* ======= NEAR EVENTS CONTAINER START ======= */
   .nearEventsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  /* ======= NEAR EVENTS CONTAINER END ======= */
+  /* ======= UPCOMING EVENTS CONTAINER START ======= */
   .upcomingEventsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  /* ======= UPCOMING EVENTS CONTAINER END ======= */
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    display: grid;
+  }
+  .joinContainer .joinRightContainer {
+    grid-column-start: 1;
+  }
+  .joinContainer .joinRightContainer img {
+    width: 100%;
+  }
+  /* ======= JOIN CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */

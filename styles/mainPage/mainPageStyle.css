@@ -277,6 +277,41 @@ main {
 /* ======= NEAR EVENTS CONTAINER END ======= */
 /* ======= UPCOMING EVENTS CONTAINER START ======= */
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
+/* ======= JOIN CONTAINER START ======= */
+.joinContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  width: 100%;
+  border-radius: 8px;
+  padding: 36px 56px;
+  margin-bottom: 64px;
+}
+.joinContainer .joinLeftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+  width: 50%;
+}
+.joinContainer .joinLeftContainer h2 {
+  font-size: 2.8rem;
+}
+.joinContainer .joinLeftContainer p {
+  font-size: 1.6rem;
+}
+.joinContainer .joinLeftContainer button {
+  border: none;
+  background-color: #E32359;
+  color: #ffffff;
+  padding: 8px 66px;
+  border-radius: 8px;
+}
+
+/* ======= JOIN CONTAINER END ======= */
 /* ================ END OF MAIN PAGE ==================== */
 
 /*# sourceMappingURL=mainPageStyle.css.map */

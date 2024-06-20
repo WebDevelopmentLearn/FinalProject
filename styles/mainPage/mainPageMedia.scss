@@ -116,14 +116,65 @@
 
   /* ======= EVENTS CONTAINER END ======= */
 
-
+  /* ======= NEAR EVENTS CONTAINER START ======= */
   .nearEventsContainer {
     @include flexBox(column, center, center);
   }
+  /* ======= NEAR EVENTS CONTAINER END ======= */
 
+  /* ======= UPCOMING EVENTS CONTAINER START ======= */
   .upcomingEventsContainer {
     @include flexBox(column, center, center);
   }
+  /* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+
+
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    display: grid;
+
+
+
+    .joinRightContainer {
+      grid-column-start: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    //@include flexBox(column, space-between, center);
+    //background-color: #97CAD114;
+    //width: 100%;
+    //border-radius: 8px;
+    //padding: 36px 56px;
+    //margin-bottom: 64px;
+    //
+    //.joinLeftContainer {
+    //  @include flexBox(column, center, start);
+    //  gap: 16px;
+    //  width: 50%;
+    //  h2 {
+    //    font-size: 2.0rem;
+    //  }
+    //
+    //  p {
+    //    font-size: 1.2rem;
+    //  }
+    //
+    //  button {
+    //
+    //  }
+    //}
+    //
+    //.joinRightContainer {
+    //  img {
+    //    width: 100%;
+    //  }
+    //}
+  }
+  /* ======= JOIN CONTAINER END ======= */
 }
 
 
