@@ -42,6 +42,7 @@ nav {
 /* ======= LOGO CONTAINER END ======= */
 /* ======= SEARCH CONTAINER START ======= */
 .searchContainer {
+  margin-left: -50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
