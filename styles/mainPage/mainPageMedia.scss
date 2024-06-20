@@ -48,6 +48,75 @@
     }
   }
   /* ======= RIGHT CONTAINER END ======= */
+
+  /* ================ END OF NAV ==================== */
+
+
+  /* ================ START OF MAIN PAGE ==================== */
+
+  main {
+    @include flexBox(column, center, center);
+  }
+
+  .aboutUsContainer {
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .aboutUsInfoContainer {
+      gap: 20px;
+      width: 100%;
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 24px;
+      }
+
+      a {
+        display: none;
+      }
+    }
+
+    .aboutUsImgContainer {
+      img {
+        width: 240px;
+      }
+    }
+
+  }
+
+  /* ================ END OF MAIN PAGE ==================== */
+
+
+
+  /* ======= EVENTS CONTAINER START ======= */
+  .eventsContainer {
+    width: 100%;
+    justify-content: center;
+
+    .leftEventContainer {
+      h3 {
+        font-size: 2.0rem;
+      }
+
+      button {
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .seeAllEventsContainer {
+      display: none;
+    }
+  }
+
+
+  /* ======= EVENTS CONTAINER END ======= */
+
 }
 
-/* ================ END OF NAV ==================== */
+
+

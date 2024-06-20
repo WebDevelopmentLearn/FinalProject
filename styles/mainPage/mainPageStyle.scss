@@ -25,55 +25,56 @@ nav {
 
 /* ======= SEARCH CONTAINER START ======= */
 
+
+/* ======= SEARCH CONTAINER START ======= */
+
 .searchContainer {
   @include flexBox(row, center, center);
 
   .searchForm {
     @include flexBox(row, center, center);
-
-    #searchInput {
-      width: 20vw;
-      border-right: none;
-      outline: none;
-      padding: 12px 5px 12px 37px;
-      border: 1px solid #d9d9d9;
-      border-radius: 8px 0 0 8px;
-      font-size: 1.6rem;
-    }
-
-    #searchCityInput {
-      width: 20vw;
-      border-right: none;
-      outline: none;
-      padding: 12px 20px;
-      border: 1px solid #d9d9d9;
-      border-left: none;
-      border-right: none;
-      font-size: 1.6rem;
-    }
-
-    .searchLabel {
-      position: relative;
-    }
-
-    #searchIcon {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      padding-left: 10px;
-    }
-
-    .searchBtn {
-      width: 45px;
-      height: 45px;
-      border: none;
-      border-radius: 0 8px 8px 0;
-      background-color: #f65858;
-    }
   }
 
+  #searchInput {
+    width: 20vw;
+    border-right: none;
+    outline: none;
+    padding: 12px 5px 12px 37px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px 0 0 8px;
+    font-size: 1.6rem;
+  }
 
+  #searchCityInput {
+    width: 20vw;
+    border-right: none;
+    outline: none;
+    padding: 12px 20px;
+    border: 1px solid #d9d9d9;
+    border-left: none;
+    border-right: none;
+    font-size: 1.6rem;
+  }
+
+  .searchLabel {
+    position: relative;
+  }
+
+  #searchIcon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+  }
+
+  .searchBtn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #f65858;
+  }
 }
 
 /* ======= SEARCH CONTAINER END ======= */
@@ -110,3 +111,145 @@ nav {
 /* ======= RIGHT CONTAINER END ======= */
 
 /* ================ END OF NAV ==================== */
+
+
+
+/* ================ START OF MAIN PAGE ==================== */
+
+main {
+  @include flexBox(column, center, center);
+}
+
+
+/* ======= ABOUT US CONTAINER START ======= */
+.aboutUsContainer {
+  @include flexBox(row, center, center);
+  max-width: 1140px;
+  margin: 5% 10%;
+  gap: 55px;
+
+
+  .aboutUsInfoContainer {
+    @include flexBox(column, center, start);
+    gap: 24px;
+    width: 50%;
+    h1 {
+      font-size: 4.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    a {
+      background-color: #00798A;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+  }
+}
+/* ======= ABOUT US CONTAINER END ======= */
+
+
+/* ======= EVENTS CONTAINER START ======= */
+.eventsContainer {
+  @include flexBox(row, space-between, center);
+  max-width: 1140px;
+  width: 66vw;
+
+  .leftEventContainer {
+    @include flexBox(row, space-between, center);
+    gap: 25px;
+
+    h3 {
+      font-size: 2.8rem;
+    }
+
+    button {
+      background-color: #97CAD11F;
+      border: none;
+      border-radius: 8px;
+      @include flexBox(row, center, center);
+      gap: 8px;
+      padding: 12px 12px 8px 12px;
+
+      span {
+        font-size: 2.0rem;
+        color: #00798A;
+      }
+    }
+  }
+
+  .seeAllEventsContainer {
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: #00798A;
+    }
+  }
+}
+
+
+/* ======= EVENTS CONTAINER END ======= */
+
+
+/* ======= NEAR EVENTS CONTAINER START ======= */
+
+.nearEventsContainer {
+  @include flexBox(row, center, center);
+  flex-wrap: wrap;
+  gap: 10px;
+
+  div {
+    padding-bottom: 10px;
+    max-width: 272px;
+    max-height: 400px;
+  }
+
+  .eventInfoContainer {
+    @include flexBox(column, center, start);
+    gap: 10px;
+    h4 {
+      font-size: 2.0rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #212121;
+    }
+
+    .eventLocationInfo {
+      color: #707070;
+    }
+
+    .eventDateInfo:before {
+      content: url("/assets/mainPage/main/calendar_icon.svg");
+    }
+
+    .additionEventInfoContainer {
+      @include flexBox(row, start, center);
+      gap: 16px;
+      .membersWaitingInfo {
+        font-size: 1.6rem;
+        &:before {
+          content: url("/assets/mainPage/main/check_icon.svg");
+        }
+      }
+
+      .paidInfo {
+        font-size: 1.6rem;
+        &:before {
+          content: url("/assets/mainPage/main/ticket_icon.svg");
+        }
+      }
+    }
+  }
+}
+
+
+/* ======= NEAR EVENTS CONTAINER END ======= */
+
+
+/* ================ END OF MAIN PAGE ==================== */
