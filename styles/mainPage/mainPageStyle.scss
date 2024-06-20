@@ -26,7 +26,6 @@ nav {
 /* ======= SEARCH CONTAINER START ======= */
 
 .searchContainer {
-  margin-left: -50px;
   @include flexBox(row, center, center);
 
   .searchForm {

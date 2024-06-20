@@ -39,8 +39,8 @@
   .rightNavContainer {
     grid-row-start: 1;
     grid-column-start: 2;
-    @include flexBox(row, space-evenly, center);
-    gap: 1px;
+    @include flexBox(row, end, center);
+    gap: 16px;
     margin-right: 8px;
 
     a {
