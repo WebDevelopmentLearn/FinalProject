@@ -286,6 +286,7 @@ main {
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
+  width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 20px;
@@ -330,6 +331,7 @@ main {
 /* ======= JOIN CONTAINER END ======= */
 /* ======= TOP CATEGORIES CONTAINER START ======= */
 .topCategoriesContainer {
+  width: 100%;
   margin-bottom: 24px;
 }
 .topCategoriesContainer h2 {
@@ -365,6 +367,7 @@ main {
 /* ======= TOP CATEGORIES CONTAINER END ======= */
 /* ======= POPULAR CITIES CONTAINER START ======= */
 .popularCitiesContainer {
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 24px;
 }
