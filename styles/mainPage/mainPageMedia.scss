@@ -1,5 +1,6 @@
 @import "../mixins";
 
+/* ================ START OF ADAPTIVE 768px ==================== */
 @media screen and (max-width: 768px) {
   /* ================ START OF NAV ==================== */
   nav {
@@ -225,9 +226,25 @@
   }
 
   /* ======= HOW MEET WORKS CONTAINER END ======= */
+
+
+
+
+
+
+
+  /* ================ START OF FOOTER ==================== */
+  footer {
+    padding: 35px 25px;
+  }
+
+
+
+  /* ================ END OF FOOTER ==================== */
 }
+/* ================ END OF ADAPTIVE 768px ==================== */
 
-
+/* ================ START OF ADAPTIVE 426px ==================== */
 @media screen and (max-width: 426px) {
 
   main {
@@ -497,7 +514,36 @@
   }
 
   /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
+
+
+
+
+
+  /* ================ START OF FOOTER ==================== */
+
+  .footerInfoContainer {
+    gap: 5px;
+  }
+
+  .footerLinksContainer {
+    gap: 5px;
+  }
+
+  .followsLinks {
+    .downloadsStoresContainer {
+      display: none;
+    }
+
+  }
+  .footerAdditionInfoContainer {
+    a {
+      display: none;
+    }
+  }
+
+  /* ================ END OF FOOTER ==================== */
 }
+/* ================ END OF ADAPTIVE 426px ==================== */
 //@media screen and (min-width: 600px)
 
 
