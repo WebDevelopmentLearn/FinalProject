@@ -225,6 +225,9 @@ main {
   max-width: 272px;
   max-height: 400px;
 }
+.nearEventsContainer hr, .upcomingEventsContainer hr {
+  display: none;
+}
 .nearEventsContainer .eventInfoContainer, .upcomingEventsContainer .eventInfoContainer {
   display: flex;
   flex-direction: column;
@@ -279,36 +282,44 @@ main {
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
   background-color: rgba(151, 202, 209, 0.0784313725);
-  width: 100%;
   border-radius: 8px;
-  padding: 36px 56px;
+  padding: 16px 56px;
   margin-bottom: 64px;
 }
-.joinContainer .joinLeftContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 16px;
-  width: 50%;
+.joinContainer #joinImg {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  align-self: center;
+  justify-self: end;
 }
-.joinContainer .joinLeftContainer h2 {
+.joinContainer h2 {
   font-size: 2.8rem;
 }
-.joinContainer .joinLeftContainer p {
+.joinContainer p {
   font-size: 1.6rem;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
-.joinContainer .joinLeftContainer button {
+.joinContainer button {
+  width: 192px;
+  height: 40px;
   border: none;
   background-color: #E32359;
   color: #ffffff;
   padding: 8px 66px;
   border-radius: 8px;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
 /* ======= JOIN CONTAINER END ======= */

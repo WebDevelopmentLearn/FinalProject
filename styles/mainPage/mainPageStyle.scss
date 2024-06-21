@@ -215,6 +215,10 @@ main {
     max-height: 400px;
   }
 
+  hr {
+    display: none;
+  }
+
   .eventInfoContainer {
     @include flexBox(column, center, start);
     gap: 10px;
@@ -269,33 +273,61 @@ main {
 
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
-  @include flexBox(row, space-between, center);
+  //@include flexBox(row, space-between, center);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;//Колонки( вверх/вниз)
+  column-gap: 20px;
+
   background-color: #97CAD114;
-  width: 100%;
+  //width: 100%;
   border-radius: 8px;
-  padding: 36px 56px;
+  padding: 16px 56px;
   margin-bottom: 64px;
 
-  .joinLeftContainer {
-    @include flexBox(column, center, start);
-    gap: 16px;
-    width: 50%;
-    h2 {
-      font-size: 2.8rem;
-    }
+  //.joinLeftContainer {
+  //  @include flexBox(column, center, start);
+  //  gap: 16px;
+  //  width: 50%;
+  //
+  //}
 
-    p {
-      font-size: 1.6rem;
-    }
+  #joinImg {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+  }
 
-    button {
-      border: none;
-      background-color: #E32359;
-      color: #ffffff;
-      padding: 8px 66px;
-      border-radius: 8px;
+  h2 {
+    font-size: 2.8rem;
+  }
 
-    }
+  p {
+    font-size: 1.6rem;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  button {
+    width: 192px;
+    height: 40px;
+    border: none;
+    background-color: #E32359;
+    color: #ffffff;
+    padding: 8px 66px;
+    border-radius: 8px;
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
   }
 }
 /* ======= JOIN CONTAINER END ======= */
