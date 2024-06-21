@@ -277,6 +277,11 @@
     font-size: 1.2rem;
   }
   /* ======= JOIN CONTAINER END ======= */
+  /* ======= TOP CATEGORIES CONTAINER START ======= */
+  .topCategoriesContainer h2 {
+    font-size: 2rem;
+  }
+  /* ======= TOP CATEGORIES CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */

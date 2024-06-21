@@ -327,4 +327,37 @@ main {
 }
 /* ======= JOIN CONTAINER END ======= */
 
+
+/* ======= TOP CATEGORIES CONTAINER START ======= */
+
+.topCategoriesContainer {
+  margin-bottom: 24px;
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+  }
+}
+
+.topCategoriesList {
+  @include flexBox(row, center, normal);
+  flex-wrap: wrap;
+  gap: 16px;
+
+  div {
+    width: 135px;
+    height: 112px;
+    background-color: #97CAD114;
+    border-radius: 8px;
+    @include flexBox(column, center, center);
+    gap: 6px;
+    padding: 16px;
+
+    p {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+}
+
+/* ======= TOP CATEGORIES CONTAINER END ======= */
 /* ================ END OF MAIN PAGE ==================== */
