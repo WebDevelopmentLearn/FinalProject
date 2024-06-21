@@ -347,6 +347,36 @@
     font-size: 1rem;
   }
   /* ======= HOW MEET WORKS CONTAINER END ======= */
+  /* ======= FRIENDSHIPS MEET CONTAINER START ======= */
+  .friendshipsMeetContainer {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  .friendshipsMeetContainer h2 {
+    font-size: 2rem;
+  }
+  .friendshipsMeetContainer .friendshipsDesc {
+    display: none;
+  }
+  .friendshipsFeaturesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .friendshipsFeaturesList div h4 {
+    font-size: 1.6rem;
+  }
+  .friendshipsFeaturesList div p {
+    font-size: 1.2rem;
+  }
+  .friendshipsFeaturesList div a {
+    font-size: 1.2rem;
+  }
+  /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */
