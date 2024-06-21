@@ -183,54 +183,26 @@
   /* ======= JOIN CONTAINER START ======= */
   .joinContainer {
     @include flexBox(column, center, center);
+    gap: 6px;
 
     h2 {
-      justify-content: center;
+      align-self: flex-start;
     }
 
-    //.joinRightContainer {
-    //  grid-column-start: 1;
-    //
-    //  img {
-    //    width: 100%;
-    //  }
-    //}
+    p {
+      line-height: 24px;
+    }
 
-    //@include flexBox(column, space-between, center);
-    //background-color: #97CAD114;
-    //width: 100%;
-    //border-radius: 8px;
-    //padding: 36px 56px;
-    //margin-bottom: 64px;
-    //
-    //.joinLeftContainer {
-    //  @include flexBox(column, center, start);
-    //  gap: 16px;
-    //  width: 50%;
-    //  h2 {
-    //    font-size: 2.0rem;
-    //  }
-    //
-    //  p {
-    //    font-size: 1.2rem;
-    //  }
-    //
-    //  button {
-    //
-    //  }
-    //}
-    //
-    //.joinRightContainer {
-    //  img {
-    //    width: 100%;
-    //  }
-    //}
+    button {
+      margin-top: 16px;
+    }
+
   }
   /* ======= JOIN CONTAINER END ======= */
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 
   main {
 
@@ -332,6 +304,27 @@
     }
   }
   /* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+
+
+
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    padding: 16px 15px;
+
+    h2 {
+      font-size: 2.0rem;
+    }
+
+    #joinImg {
+      width: 240px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  /* ======= JOIN CONTAINER END ======= */
 }
 //@media screen and (min-width: 600px)
 

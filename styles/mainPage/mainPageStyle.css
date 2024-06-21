@@ -29,6 +29,10 @@ html {
   font-size: 10px;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* ================ START OF NAV ==================== */
 nav {
   display: flex;
@@ -320,6 +324,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 1;
+  font-size: 1.6rem;
 }
 
 /* ======= JOIN CONTAINER END ======= */

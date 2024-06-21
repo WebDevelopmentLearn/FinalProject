@@ -160,13 +160,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 6px;
   }
   .joinContainer h2 {
-    justify-content: center;
+    align-self: flex-start;
+  }
+  .joinContainer p {
+    line-height: 24px;
+  }
+  .joinContainer button {
+    margin-top: 16px;
   }
   /* ======= JOIN CONTAINER END ======= */
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   main {
     padding: 0 15px 0 15px;
   }
@@ -256,6 +263,20 @@
     font-size: 1rem;
   }
   /* ======= UPCOMING EVENTS CONTAINER END ======= */
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    padding: 16px 15px;
+  }
+  .joinContainer h2 {
+    font-size: 2rem;
+  }
+  .joinContainer #joinImg {
+    width: 240px;
+  }
+  .joinContainer p {
+    font-size: 1.2rem;
+  }
+  /* ======= JOIN CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */
