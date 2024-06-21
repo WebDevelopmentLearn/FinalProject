@@ -282,6 +282,28 @@
     font-size: 2rem;
   }
   /* ======= TOP CATEGORIES CONTAINER END ======= */
+  /* ======= POPULAR CITIES CONTAINER START ======= */
+  .popularCitiesContainer {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .popularCitiesContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .popularCitiesContainer p {
+    font-size: 1.2rem;
+  }
+  .popularCitiesList {
+    gap: 18px;
+  }
+  .popularCitiesList div {
+    width: 155px;
+  }
+  .popularCitiesList div img {
+    width: 100%;
+  }
+  /* ======= POPULAR CITIES CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */
