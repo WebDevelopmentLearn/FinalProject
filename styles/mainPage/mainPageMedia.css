@@ -366,6 +366,7 @@
     align-items: normal;
     flex-wrap: wrap;
     gap: 32px;
+    margin-top: 24px;
   }
   .friendshipsFeaturesList div h4 {
     font-size: 1.6rem;
