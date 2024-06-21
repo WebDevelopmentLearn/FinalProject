@@ -385,6 +385,7 @@ main {
   flex-wrap: wrap;
   gap: 42px;
   margin-top: 28px;
+  margin-bottom: 40px;
 }
 .popularCitiesList div {
   display: flex;
@@ -399,6 +400,61 @@ main {
 }
 
 /* ======= POPULAR CITIES CONTAINER END ======= */
+/* ======= HOW MEET WORKS CONTAINER START ======= */
+.howMeetWorksContainer {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.howMeetWorksContainer h2 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.howMeetWorksList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.howMeetWorksList .howMeetWorksSubContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 24px;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  border-radius: 8px;
+  padding: 32px 24px;
+  width: 580px;
+}
+.howMeetWorksList .howMeetWorksImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.howMeetWorksList .howMeetWorksInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  max-width: 380px;
+}
+.howMeetWorksList .howMeetWorksInfoContainer h4 {
+  font-size: 2rem;
+}
+.howMeetWorksList .howMeetWorksInfoContainer p {
+  font-size: 1.6rem;
+}
+.howMeetWorksList .howMeetWorksInfoContainer a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #00798A;
+}
+
+/* ======= HOW MEET WORKS CONTAINER END ======= */
 /* ================ END OF MAIN PAGE ==================== */
 
 /*# sourceMappingURL=mainPageStyle.css.map */

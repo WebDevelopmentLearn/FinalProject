@@ -172,6 +172,21 @@
     margin-top: 16px;
   }
   /* ======= JOIN CONTAINER END ======= */
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+  .howMeetWorksContainer h2 {
+    font-size: 2rem;
+  }
+  .howMeetWorksList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .howMeetWorksList .howMeetWorksSubContainer {
+    width: 100%;
+  }
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
 }
 @media screen and (max-width: 426px) {
   main {
@@ -304,6 +319,34 @@
     width: 100%;
   }
   /* ======= POPULAR CITIES CONTAINER END ======= */
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+  .howMeetWorksContainer h2 {
+    margin-bottom: 18px;
+  }
+  .howMeetWorksList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .howMeetWorksList .howMeetWorksSubContainer {
+    width: 100%;
+    gap: 12px;
+  }
+  .howMeetWorksList .howMeetWorksImgContainer img {
+    width: 25px;
+  }
+  .howMeetWorksList .howMeetWorksInfoContainer h4 {
+    font-size: 1.2rem;
+  }
+  .howMeetWorksList .howMeetWorksInfoContainer p {
+    font-size: 1rem;
+  }
+  .howMeetWorksList .howMeetWorksInfoContainer a {
+    font-size: 1rem;
+  }
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
 }
 
 /*# sourceMappingURL=mainPageMedia.css.map */

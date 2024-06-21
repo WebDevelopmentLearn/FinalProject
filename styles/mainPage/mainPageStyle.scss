@@ -384,6 +384,7 @@ main {
   flex-wrap: wrap;
   gap: 42px;
   margin-top: 28px;
+  margin-bottom: 40px;
 
   div {
     //width: 135px;
@@ -402,5 +403,58 @@ main {
 }
 
 /* ======= POPULAR CITIES CONTAINER END ======= */
+
+
+
+/* ======= HOW MEET WORKS CONTAINER START ======= */
+
+.howMeetWorksContainer {
+  width: 100%;
+  margin-bottom: 40px;
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+  }
+
+}
+
+.howMeetWorksList {
+  @include flexBox(row, space-between, center);
+  gap: 32px;
+  //flex-wrap: wrap;
+  .howMeetWorksSubContainer {
+    @include flexBox(row, start, start);
+    gap: 24px;
+    background-color: #97CAD114;
+    border-radius: 8px;
+    padding: 32px 24px;
+    width: 580px;
+  }
+
+  .howMeetWorksImgContainer {
+    @include flexBox(column, start, start);
+  }
+
+  .howMeetWorksInfoContainer {
+    @include flexBox(column, start, start);
+    gap: 16px;
+    max-width: 380px;
+    h4 {
+      font-size: 2.0rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #00798A;
+    }
+  }
+}
+
+/* ======= HOW MEET WORKS CONTAINER END ======= */
 
 /* ================ END OF MAIN PAGE ==================== */

@@ -199,6 +199,32 @@
 
   }
   /* ======= JOIN CONTAINER END ======= */
+
+
+
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+
+  .howMeetWorksContainer {
+
+    h2 {
+      font-size: 2.0rem;
+
+    }
+
+  }
+
+  .howMeetWorksList {
+    @include flexBox(column, center, center);
+    gap: 12px;
+    ////flex-wrap: wrap;
+    .howMeetWorksSubContainer {
+
+      width: 100%;
+    }
+
+  }
+
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
 }
 
 
@@ -385,6 +411,51 @@
   }
 
   /* ======= POPULAR CITIES CONTAINER END ======= */
+
+
+
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+
+  .howMeetWorksContainer {
+
+    h2 {
+      margin-bottom: 18px;
+    }
+
+  }
+
+  .howMeetWorksList {
+    @include flexBox(column, center, center);
+    gap: 12px;
+    ////flex-wrap: wrap;
+    .howMeetWorksSubContainer {
+      width: 100%;
+      gap: 12px;
+    }
+
+    .howMeetWorksImgContainer {
+      img {
+        width: 25px;
+      }
+    }
+
+    .howMeetWorksInfoContainer {
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1.0rem;
+      }
+
+      a {
+        font-size: 1.0rem;
+      }
+    }
+
+  }
+
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
 }
 //@media screen and (min-width: 600px)
 
