@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <link rel="stylesheet" href="styles/eventsPage/eventsPageStyle.css" />
+    <link rel="stylesheet" href="styles/eventsPage/eventsPageMedia.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +14,187 @@
     <title>Events Page</title>
   </head>
   <body>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+  <nav>
+    <div class="logoContainer">
+      <a href="#">
+        <img src="./assets/logo.svg" alt="logo" />
+      </a>
+    </div>
+    <div class="searchContainer">
+      <form class="searchForm" action="">
+        <label class="searchLabel" for="searchInput">
+          <input id="searchInput" name="search" type="search" placeholder="Search events" />
+          <img alt="search_icon" id="searchIcon" src="./assets/mainPage/navbar/search_icon.svg" />
+        </label>
+        <label class="searchCityLabel" for="searchCityInput">
+          <input id="searchCityInput" name="search" type="search" />
+        </label>
+        <button class="searchBtn">
+          <img alt="second_search_icon" src="./assets/mainPage/navbar/second_search_icon.svg" />
+        </button>
+      </form>
+    </div>
+    <div class="rightNavContainer">
+      <button class="switchLangBtn">
+        <img src="./assets/mainPage/navbar/lang_icon.svg" alt="lang_icon" />
+        <span class="text500">English</span>
+      </button>
+      <a class="text500" href="">Log in</a>
+      <button class="signUpBtn text500">Sign up</button>
+    </div>
+  </nav>
+    <main>
+
+      <div class="gridContainer">
+        <div>
+          <h1>Events near New York, NY</h1>
+          <h2>Events</h2>
+          <h1>Single select</h1>
+
+         <div class="eventsFiltersContainer">
+           <form id="selectTypeForm">
+             <div id="selectTypeEvent" class="selectMenu" data-state="">
+               <div class="selectMenuEventTitle" data-default="Option 0">Any type</div>
+               <div class="selectMenuEventContent">
+
+                 <input id="selectType0" class="__select__input" type="radio" name="singleSelect" checked />
+                 <label for="selectType0" class="__select__label">Any distance</label>
+
+                 <input id="selectType1" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectType1" class="__select__label">Online</label>
+
+                 <input id="selectType2" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectType2" class="__select__label">Offline</label>
+
+               </div>
+             </div>
+           </form>
+
+           <form id="selectDistanceForm">
+             <div id="selectDistanceEvent" class="selectMenu" data-state="">
+               <div class="selectMenuEventTitle" data-default="Option 0">Any distance</div>
+               <div class="selectMenuEventContent">
+
+                 <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                 <label for="singleSelect0" class="__select__label">Any distance</label>
+
+                 <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect1" class="__select__label">5 km</label>
+
+                 <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect2" class="__select__label">10 km</label>
+
+                 <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect3" class="__select__label">15 km</label>
+
+                 <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect4" class="__select__label">25 km</label>
+
+                 <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect5" class="__select__label">50 km</label>
+
+                 <input id="singleSelect6" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect6" class="__select__label">75 km</label>
+
+                 <input id="singleSelect7" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="singleSelect7" class="__select__label">100 km</label>
+               </div>
+             </div>
+           </form>
+
+           <form id="selectCategoryForm">
+             <div id="selectCategoryEvent" class="selectMenu" data-state="">
+               <div class="selectMenuEventTitle" data-default="Option 0">Any category</div>
+               <div class="selectMenuEventContent">
+
+                 <input id="selectCategory0" class="__select__input" type="radio" name="singleSelect" checked />
+                 <label for="selectCategory0" class="__select__label">Any category</label>
+
+                 <input id="selectCategory1" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectCategory1" class="__select__label">Social Activities</label>
+
+                 <input id="selectCategory2" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectCategory2" class="__select__label">Hobbies and Passions</label>
+
+                 <input id="selectCategory3" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectCategory3" class="__select__label">Health and Wellbeing</label>
+
+                 <input id="selectCategory4" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectCategory4" class="__select__label">Business</label>
+
+                 <input id="selectCategory5" class="__select__input" type="radio" name="singleSelect" />
+                 <label for="selectCategory5" class="__select__label">Technology</label>
+
+               </div>
+             </div>
+           </form>
+         </div>
+      </div>
+        <img src="./assets/eventsPage/google_maps_img.png" alt="google_maps_img">
+        <div class="eventsList"></div>
+      </div>
+
+    </main>
+    <footer>
+      <div class="footerInfoContainer">
+        <h4 class="text600">Create your own Meetup group.</h4>
+        <button class="text600">Get Started</button>
+      </div>
+      <div class="footerLinksContainer">
+        <div>
+          <h4>Your Account</h4>
+          <a href="#">Sign up</a>
+          <a href="#">Log in</a>
+          <a href="#">Help</a>
+          <a href="#">Become an Affiliate</a>
+        </div>
+        <div>
+          <h4>Discover</h4>
+          <a href="#">Groups</a>
+          <a href="#">Calendar</a>
+          <a href="#">Topics</a>
+          <a href="#">Cities</a>
+          <a href="#">Online Events</a>
+          <a href="#">Local Guides</a>
+          <a href="#">Make Friends</a>
+        </div>
+        <div>
+          <h4>Meetup</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Meetup Pro</a>
+          <a href="#">Careers</a>
+          <a href="#">Apps</a>
+          <a href="#">Podcast</a>
+        </div>
+      </div>
+
+      <div class="followsLinks">
+        <div class="followContainer">
+          <h4>Follow us</h4>
+          <div class="socialPagesContainer">
+            <img src="./assets/mainPage/footer/facebook_icon.svg" alt="facebook_icon">
+            <img src="./assets/mainPage/footer/twitter_icon.svg" alt="twitter_icon">
+            <img src="./assets/mainPage/footer/youtube_icon.svg" alt="youtube_icon">
+            <img src="./assets/mainPage/footer/instagram_icon.svg" alt="instagram_icon">
+            <img src="./assets/mainPage/footer/tiktok_icon.svg" alt="tiktok_icon">
+          </div>
+        </div>
+        <div class="downloadsStoresContainer">
+          <img src="./assets/mainPage/footer/google_play_img.svg" alt="google_play_img">
+          <img src="./assets/mainPage/footer/app_store_img.svg" alt="app_store_img">
+        </div>
+      </div>
+
+      <div class="footerAdditionInfoContainer">
+        <p>© 2024 Meetup</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell or Share My Personal Data</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
   </body>
+  <script type="module" src="./scripts/eventsPage/index.js"></script>
 </html>
