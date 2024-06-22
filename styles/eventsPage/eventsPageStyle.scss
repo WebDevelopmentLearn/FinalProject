@@ -159,6 +159,9 @@ main {
 /* ======= FILTERS START ======= */
 
 .selectMenu {
+  z-index: 1; /* Ensure the selectMenu is above other content */
+  flex: 0 0 auto;
+
   position: relative;
   width: 150px;
   height: 40px;
@@ -199,7 +202,7 @@ main {
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-
+  position: relative; /* Ensure the pseudo-elements are positioned correctly */
   &::before,
   &::after {
     content: "";
@@ -225,8 +228,10 @@ main {
 }
 
 .selectMenuEventContent {
-  position: absolute;
-  top: 40px;
+  //position: fixed; /* Fixed positioning to stay in view */
+  position: absolute; /* Absolute positioning relative to the selectMenu */
+  top: 100%; /* Align the top of the dropdown with the bottom of the selectMenu */
+  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
