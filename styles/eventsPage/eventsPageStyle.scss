@@ -125,13 +125,29 @@ nav {
 
 /* ================ START OF MAIN PAGE ==================== */
 
+main {
+  @include flexBox(column, center, center);
+  padding: 0 10% 0 10%;
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 }
 
+.eventMainContainer {
+  @include flexBox(row, space-between, start);
+  margin-top: 78px;
+  width: 100%;
+
+  div {
+
+    .eventsHeader2Container {
+      width: max-content;
+      margin-bottom: 12px;
+      #eventsHeader2 {
+        color: #00798A;
+        border-bottom: 4px solid #00798A;
+      }
+    }
+  }
+}
 
 .eventsFiltersContainer {
   @include flexBox(row, start, start);
@@ -139,6 +155,8 @@ nav {
 
 }
 
+
+/* ======= FILTERS START ======= */
 
 .selectMenu {
   position: relative;
@@ -172,7 +190,6 @@ nav {
     }
   }
 }
-
 
 .selectMenuEventTitle {
   display: flex;
@@ -224,7 +241,6 @@ nav {
   z-index: 8;
 }
 
-
 .__select__input {
   display: none;
 
@@ -261,34 +277,25 @@ nav {
   }
 }
 
-
+/* ======= FILTERS END ======= */
 
 /* ======= NEAR EVENTS CONTAINER START ======= */
-//.eventsList {
-//  .eventContainer {
-//    @include flexBox(row, normal, normal);
-//    max-width: 100%;
-//    gap: 20px;
-//
-//    img {
-//      width: 160px;
-//      height: 100px;
-//    }
-//
-//    .eventInfoContainer {
-//      @include flexBox(column, center, start);
-//
-//      h3 {
-//        color: #7C6F50;
-//      }
-//    }
-//  }
-//}
 
+
+/* ======= MAP CONTAINER START ======= */
+.mapContainer {
+  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+/* ======= MAP CONTAINER END ======= */
+
+/* ======= EVENTS LIST START ======= */
 .eventsList {
-  @include flexBox(row, space-between, normal);
-  flex-wrap: wrap;
-  gap: 36px;
+  @include flexBox(column, normal, normal);
+
+  gap: 20pxpx;
   width: 100%;
   margin-top: 24px;
   margin-bottom: 36px;
@@ -296,10 +303,10 @@ nav {
 
     .eventContainer {
       @include flexBox(row, normal, normal);
-      //max-width: 100%;
-      gap: 20px;
+      max-width: 100%;
+      gap: 12px;
       padding-bottom: 10px;
-      max-width: 272px;
+      //max-width: 272px;
       max-height: 400px;
 
       img {
@@ -308,66 +315,23 @@ nav {
       }
 
       .eventInfoContainer {
-        @include flexBox(column, center, start);
-
-        h3 {
+        @include flexBox(column, start, start);
+        gap: 4px;
+        .eventDateInfo {
+          font-size: 1.4rem;
           color: #7C6F50;
+        }
+
+        h4 {
+          font-size: 1.6rem;
         }
       }
     }
-  //div {
-  //  padding-bottom: 10px;
-  //  max-width: 272px;
-  //  max-height: 400px;
-  //}
 
-
-
-  //.eventInfoContainer {
-  //  @include flexBox(column, center, start);
-  //  gap: 10px;
-  //  h4 {
-  //    font-size: 2.0rem;
-  //  }
-  //
-  //  p {
-  //    font-size: 1.4rem;
-  //    color: #212121;
-  //  }
-  //
-  //  .eventLocationInfo {
-  //    color: #707070;
-  //  }
-  //
-  //  .eventDateInfo:before {
-  //    content: url("/assets/mainPage/main/calendar_icon.svg");
-  //    @include iconInlineAlign();
-  //  }
-  //
-  //  .additionEventInfoContainer {
-  //    @include flexBox(row, start, center);
-  //    gap: 16px;
-  //    .membersWaitingInfo {
-  //      font-size: 1.6rem;
-  //      &:before {
-  //        content: url("/assets/mainPage/main/check_icon.svg");
-  //        @include iconInlineAlign();
-  //      }
-  //    }
-  //
-  //    .paidInfo {
-  //      font-size: 1.6rem;
-  //      &:before {
-  //        content: url("/assets/mainPage/main/ticket_icon.svg");
-  //        @include iconInlineAlign();
-  //      }
-  //    }
-  //  }
-  //}
 }
 
 
-/* ======= NEAR EVENTS CONTAINER END ======= */
+/* ======= EVENTS LIST END ======= */
 
 
 

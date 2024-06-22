@@ -82,30 +82,30 @@ handleSelectMenu(selectCategoryEvent, selectCategoryForm);
 //         <p className="paidInfo">Free</p>
 //     </div>
 // </div>
-eventsStore.forEach((el) => {
-    const eventContainer = document.createElement("div");
-    const eventInfoContainer = document.createElement("div");
-    const eventImage = document.createElement("img");
-    const titlePar = document.createElement("h3");
-    const descPar = document.createElement("p");
-    const typePar = document.createElement("p");
-    const categoryPar = document.createElement("p");
-    const distancePar = document.createElement("p");
-
-    eventContainer.classList.add("eventContainer");
-    eventInfoContainer.classList.add("eventInfoContainer");
-
-    eventImage.src = el.image;
-    titlePar.textContent = el.title;
-    descPar.textContent = el.description;
-    typePar.textContent = el.type;
-    categoryPar.textContent = el.category;
-    distancePar.textContent = el.distance;
-
-    eventInfoContainer.append(eventImage, titlePar, descPar, typePar, categoryPar, distancePar);
-    eventContainer.append(eventInfoContainer);
-    eventsList.append(eventContainer);
-})
+// eventsStore.forEach((el) => {
+//     const eventContainer = document.createElement("div");
+//     const eventInfoContainer = document.createElement("div");
+//     const eventImage = document.createElement("img");
+//     const titlePar = document.createElement("h3");
+//     const descPar = document.createElement("p");
+//     const typePar = document.createElement("p");
+//     const categoryPar = document.createElement("p");
+//     const distancePar = document.createElement("p");
+//
+//     eventContainer.classList.add("eventContainer");
+//     eventInfoContainer.classList.add("eventInfoContainer");
+//
+//     eventImage.src = el.image;
+//     titlePar.textContent = el.title;
+//     descPar.textContent = el.description;
+//     typePar.textContent = el.type;
+//     categoryPar.textContent = el.category;
+//     distancePar.textContent = el.distance;
+//
+//     eventInfoContainer.append(eventImage, titlePar, descPar, typePar, categoryPar, distancePar);
+//     eventContainer.append(eventInfoContainer);
+//     eventsList.append(eventContainer);
+// })
 
 
 function createCard(objArray) {

@@ -131,10 +131,29 @@ nav {
 /* ======= RIGHT CONTAINER END ======= */
 /* ================ END OF NAV ==================== */
 /* ================ START OF MAIN PAGE ==================== */
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10% 0 10%;
+}
+
+.eventMainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 78px;
+  width: 100%;
+}
+.eventMainContainer div .eventsHeader2Container {
+  width: max-content;
+  margin-bottom: 12px;
+}
+.eventMainContainer div .eventsHeader2Container #eventsHeader2 {
+  color: #00798A;
+  border-bottom: 4px solid #00798A;
 }
 
 .eventsFiltersContainer {
@@ -145,6 +164,7 @@ nav {
   gap: 10px;
 }
 
+/* ======= FILTERS START ======= */
 .selectMenu {
   position: relative;
   width: 150px;
@@ -242,14 +262,24 @@ nav {
   color: #ffffff;
 }
 
+/* ======= FILTERS END ======= */
 /* ======= NEAR EVENTS CONTAINER START ======= */
+/* ======= MAP CONTAINER START ======= */
+.mapContainer {
+  max-width: 100%;
+}
+.mapContainer img {
+  max-width: 100%;
+}
+
+/* ======= MAP CONTAINER END ======= */
+/* ======= EVENTS LIST START ======= */
 .eventsList {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: normal;
   align-items: normal;
-  flex-wrap: wrap;
-  gap: 36px;
+  gap: 20pxpx;
   width: 100%;
   margin-top: 24px;
   margin-bottom: 36px;
@@ -259,9 +289,9 @@ nav {
   flex-direction: row;
   justify-content: normal;
   align-items: normal;
-  gap: 20px;
+  max-width: 100%;
+  gap: 12px;
   padding-bottom: 10px;
-  max-width: 272px;
   max-height: 400px;
 }
 .eventsList .eventContainer img {
@@ -271,14 +301,19 @@ nav {
 .eventsList .eventContainer .eventInfoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
+  gap: 4px;
 }
-.eventsList .eventContainer .eventInfoContainer h3 {
+.eventsList .eventContainer .eventInfoContainer .eventDateInfo {
+  font-size: 1.4rem;
   color: #7C6F50;
 }
+.eventsList .eventContainer .eventInfoContainer h4 {
+  font-size: 1.6rem;
+}
 
-/* ======= NEAR EVENTS CONTAINER END ======= */
+/* ======= EVENTS LIST END ======= */
 /* ================ END OF MAIN PAGE ==================== */
 /* ================ START OF FOOTER ==================== */
 footer {

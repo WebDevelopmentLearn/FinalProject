@@ -1,0 +1,122 @@
+@import "../mixins";
+
+/* ================ START OF ADAPTIVE 768px ==================== */
+@media screen and (max-width: 768px) {
+
+  /* ================ START OF NAV ==================== */
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    margin: 0;
+  }
+
+  /* ======= LOGO CONTAINER START ======= */
+
+  .logoContainer {
+    margin-left: 24px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  /* ======= LOGO CONTAINER END ======= */
+
+  /* ======= SEARCH CONTAINER START ======= */
+  .searchContainer {
+    grid-column: span 2;
+
+    #searchInput {
+      width: 80vw;
+      border-right: none;
+    }
+
+    #searchCityInput {
+      display: none;
+    }
+  }
+  /* ======= SEARCH CONTAINER END ======= */
+
+  /* ======= RIGHT CONTAINER START ======= */
+  .rightNavContainer {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    @include flexBox(row, end, center);
+    gap: 16px;
+    margin-right: 8px;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+  /* ======= RIGHT CONTAINER END ======= */
+
+  /* ================ END OF NAV ==================== */
+
+  /* ================ START OF MAIN ==================== */
+  main {
+    padding: 0 15px 0 15px;
+  }
+
+  .eventMainContainer {
+    @include flexBox(column, center, start);
+    flex-wrap: wrap;
+  }
+
+  /* ================ END OF MAIN ==================== */
+
+
+
+
+  /* ================ START OF FOOTER ==================== */
+  footer {
+    padding: 35px 25px;
+  }
+  /* ================ END OF FOOTER ==================== */
+}
+/* ================ END OF ADAPTIVE 768px ==================== */
+
+/* ================ START OF ADAPTIVE 426px ==================== */
+@media screen and (max-width: 426px) {
+
+  /* ================ START OF MAIN ==================== */
+
+  .eventsFiltersContainer {
+    overflow-x: scroll;
+  }
+
+
+  .mapContainer {
+    display: none;
+  }
+
+
+  /* ================ END OF MAIN ==================== */
+
+
+  /* ================ START OF FOOTER ==================== */
+
+  .footerInfoContainer {
+    gap: 5px;
+  }
+
+  .footerLinksContainer {
+    gap: 5px;
+  }
+
+  .followsLinks {
+    .downloadsStoresContainer {
+      display: none;
+    }
+
+  }
+  .footerAdditionInfoContainer {
+    a {
+      display: none;
+    }
+  }
+
+  /* ================ END OF FOOTER ==================== */
+}
+/* ================ END OF ADAPTIVE 426px ==================== */
+//@media screen and (min-width: 600px)
