@@ -73,43 +73,39 @@ handleSelectMenu(selectTypeEvent, selectTypeForm);
 handleSelectMenu(selectDistanceEvent, selectDistanceForm);
 handleSelectMenu(selectCategoryEvent, selectCategoryForm);
 
-// <div className="eventInfoContainer">
-//     <h4>Day Trading Idea and Strategy
-//     </h4>
-//     <p className="eventLocationInfo">Business (5 km)</p>
-//     <p className="eventDateInfo">Mon, Mar 18 · 7:00 PM PDT</p>
-//     <div className="additionEventInfoContainer">
-//         <p className="membersWaitingInfo">1 going</p>
-//         <p className="paidInfo">Free</p>
-//     </div>
-// </div>
-// eventsStore.forEach((el) => {
-//     const eventContainer = document.createElement("div");
-//     const eventInfoContainer = document.createElement("div");
-//     const eventImage = document.createElement("img");
-//     const titlePar = document.createElement("h3");
-//     const descPar = document.createElement("p");
-//     const typePar = document.createElement("p");
-//     const categoryPar = document.createElement("p");
-//     const distancePar = document.createElement("p");
-//
-//     eventContainer.classList.add("eventContainer");
-//     eventInfoContainer.classList.add("eventInfoContainer");
-//
-//     eventImage.src = el.image;
-//     titlePar.textContent = el.title;
-//     descPar.textContent = el.description;
-//     typePar.textContent = el.type;
-//     categoryPar.textContent = el.category;
-//     distancePar.textContent = el.distance;
-//
-//     eventInfoContainer.append(eventImage, titlePar, descPar, typePar, categoryPar, distancePar);
-//     eventContainer.append(eventInfoContainer);
-//     eventsList.append(eventContainer);
-// })
-
-
+createCard(eventsStore);
 function createCard(objArray) {
+    objArray.forEach((eventObj) => {
+        const eventHr = document.createElement("hr");
+        const eventContainer = document.createElement("div");
+
+        const eventImage = document.createElement("img");
+
+        const eventInfoContainer = document.createElement("div");
+        const eventDateInfoPar = document.createElement("p");
+        const eventTitleHeader = document.createElement("h4");
+        const eventLocationInfo = document.createElement("p");
+
+
+        eventHr.classList.add("border");
+        eventContainer.classList.add("eventContainer");
+        eventInfoContainer.classList.add("eventInfoContainer");
+        eventDateInfoPar.classList.add("eventDateInfo", "text500");
+        eventTitleHeader.classList.add("text500");
+        eventLocationInfo.classList.add("eventLocationInfo");
+
+        eventDateInfoPar.textContent = eventObj.date;
+        eventTitleHeader.textContent = eventObj.title;
+        eventLocationInfo.textContent = eventObj.category;
+        eventImage.setAttribute("src", `${eventObj.image}`);
+
+        eventInfoContainer.append(eventDateInfoPar, eventTitleHeader, eventLocationInfo);
+        eventContainer.append(eventImage, eventInfoContainer);
+        eventsList.append(eventHr, eventContainer);
+
+
+    })
+
 }
 
 
@@ -118,19 +114,13 @@ let selectedFilters = [];
 function handleSelectMenu(selectMenu, selectForm) {
     const selectTypeEventTitle = selectMenu.querySelector(".selectMenuEventTitle");
     const selectTypeEventLabels = selectMenu.querySelectorAll(".__select__label");
-
-
-    // Toggle menu
     selectTypeEventTitle.addEventListener('click', () => {
         if ('active' === selectMenu.getAttribute('data-state')) {
             selectMenu.setAttribute('data-state', '');
             eventsFiltersContainer.style.paddingBottom = `10px`;
         } else {
             selectMenu.setAttribute('data-state', 'active');
-            // console.log(selectTypeEventLabels.length * 40);
             eventsFiltersContainer.style.paddingBottom = `${selectTypeEventLabels.length * 40}px`;
-            // eventsFiltersContainer.style.paddingBottom = `100%`;
-
         }
     });
 
@@ -140,28 +130,12 @@ function handleSelectMenu(selectMenu, selectForm) {
         }
     });
 
-// Close when click to option
     for (let i = 0; i < selectTypeEventLabels.length; i++) {
         selectTypeEventLabels[i].addEventListener('click', (evt) => {
-            // console.log("test");
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
             console.log(selectTypeEventTitle.textContent);
-            // selectForm.addEventListener("submit", () => {
-            //     console.log("test");
-            // });
         });
     }
-
-
-    // radios.forEach(radio => {
-    //     radio.addEventListener('change', () => {
-    //         if (radio.checked) {
-    //             console.log('Selected category:', radio.value);
-    //             selectTypeEventTitle.textContent = radio.value;
-    //             selectMenu.setAttribute('data-state', '');
-    //         }
-    //     });
-    // });
 }
 

@@ -310,6 +310,7 @@ main {
       @include flexBox(row, normal, normal);
       max-width: 100%;
       gap: 12px;
+      margin-top: 16px;
       padding-bottom: 10px;
       //max-width: 272px;
       max-height: 400px;
