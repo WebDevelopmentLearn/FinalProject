@@ -165,7 +165,7 @@ main {
   position: relative;
   width: 150px;
   height: 40px;
-  margin: 0 auto;
+  //margin: 0 auto;
   background-color: #F6F7F8;
   border-radius: 40px;
   transition: border-radius 0.5s;
@@ -228,9 +228,8 @@ main {
 }
 
 .selectMenuEventContent {
-  //position: fixed; /* Fixed positioning to stay in view */
-  position: absolute; /* Absolute positioning relative to the selectMenu */
-  top: 100%; /* Align the top of the dropdown with the bottom of the selectMenu */
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
   display: flex;
@@ -239,9 +238,7 @@ main {
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-
   transition: all 0.3s ease-out;
-
   opacity: 0;
   z-index: 8;
 }
@@ -306,33 +303,37 @@ main {
   margin-bottom: 36px;
   //margin: 24px 100px 0 100px;
 
-    .eventContainer {
-      @include flexBox(row, normal, normal);
-      max-width: 100%;
-      gap: 12px;
-      margin-top: 16px;
-      padding-bottom: 10px;
-      //max-width: 272px;
-      max-height: 400px;
+  .border {
+    border: 1px solid #D9D9D9;
+  }
 
-      img {
-        width: 160px;
-        height: 100px;
+  .eventContainer {
+    @include flexBox(row, normal, normal);
+    max-width: 100%;
+    gap: 12px;
+    padding-bottom: 10px;
+    //max-width: 272px;
+    max-height: 400px;
+    margin-top: 16px;
+
+    img {
+      width: 160px;
+      height: 100px;
+    }
+
+    .eventInfoContainer {
+      @include flexBox(column, start, start);
+      gap: 4px;
+      .eventDateInfo {
+        font-size: 1.4rem;
+        color: #7C6F50;
       }
 
-      .eventInfoContainer {
-        @include flexBox(column, start, start);
-        gap: 4px;
-        .eventDateInfo {
-          font-size: 1.4rem;
-          color: #7C6F50;
-        }
-
-        h4 {
-          font-size: 1.6rem;
-        }
+      h4 {
+        font-size: 1.6rem;
       }
     }
+  }
 
 }
 

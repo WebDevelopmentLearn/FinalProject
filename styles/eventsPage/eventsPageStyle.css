@@ -171,7 +171,6 @@ main {
   position: relative;
   width: 150px;
   height: 40px;
-  margin: 0 auto;
   background-color: #F6F7F8;
   border-radius: 40px;
   transition: border-radius 0.5s;
@@ -221,8 +220,8 @@ main {
 }
 
 .selectMenuEventContent {
-  position: absolute; /* Absolute positioning relative to the selectMenu */
-  top: 100%; /* Align the top of the dropdown with the bottom of the selectMenu */
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
   display: flex;
@@ -288,6 +287,9 @@ main {
   margin-top: 24px;
   margin-bottom: 36px;
 }
+.eventsList .border {
+  border: 1px solid #D9D9D9;
+}
 .eventsList .eventContainer {
   display: flex;
   flex-direction: row;
@@ -295,9 +297,9 @@ main {
   align-items: normal;
   max-width: 100%;
   gap: 12px;
-  margin-top: 16px;
   padding-bottom: 10px;
   max-height: 400px;
+  margin-top: 16px;
 }
 .eventsList .eventContainer img {
   width: 160px;

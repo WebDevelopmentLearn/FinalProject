@@ -135,6 +135,7 @@ function handleSelectMenu(selectMenu, selectForm) {
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
             console.log(selectTypeEventTitle.textContent);
+            eventsFiltersContainer.style.paddingBottom = `10px`;
         });
     }
 }
