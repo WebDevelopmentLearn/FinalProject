@@ -68,6 +68,7 @@ const eventsList = document.querySelector(".eventsList");
 const selectTypeEvent = document.querySelector("#selectTypeEvent");
 const selectDistanceEvent = document.querySelector("#selectDistanceEvent");
 const selectCategoryEvent = document.querySelector("#selectCategoryEvent");
+const eventsFiltersContainer = document.querySelector(".eventsFiltersContainer");
 handleSelectMenu(selectTypeEvent, selectTypeForm);
 handleSelectMenu(selectDistanceEvent, selectDistanceForm);
 handleSelectMenu(selectCategoryEvent, selectCategoryForm);
@@ -123,8 +124,13 @@ function handleSelectMenu(selectMenu, selectForm) {
     selectTypeEventTitle.addEventListener('click', () => {
         if ('active' === selectMenu.getAttribute('data-state')) {
             selectMenu.setAttribute('data-state', '');
+            eventsFiltersContainer.style.paddingBottom = `10px`;
         } else {
             selectMenu.setAttribute('data-state', 'active');
+            // console.log(selectTypeEventLabels.length * 40);
+            eventsFiltersContainer.style.paddingBottom = `${selectTypeEventLabels.length * 40}px`;
+            // eventsFiltersContainer.style.paddingBottom = `100%`;
+
         }
     });
 
@@ -158,6 +164,4 @@ function handleSelectMenu(selectMenu, selectForm) {
     //     });
     // });
 }
-
-
 
