@@ -140,17 +140,17 @@ function handleSelectMenu(selectMenu, selectForm) {
             if (evt.target.closest("#selectTypeEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.typeEvent = evt.target.textContent;
-                filterEvents("type", eventsStore, selectedFilters);
+                filterEvents(eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectDistanceEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.distanceEvent = +evt.target.textContent.split("km")[0];
-                filterEvents("distance", eventsStore, selectedFilters);
+                filterEvents(eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectCategoryEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.categoryEvent = evt.target.textContent;
-                filterEvents("category", eventsStore, selectedFilters);
+                filterEvents(eventsStore, selectedFilters);
             }
             console.log(selectedFilters);
             selectTypeEventTitle.textContent = evt.target.textContent;
@@ -162,25 +162,26 @@ function handleSelectMenu(selectMenu, selectForm) {
 }
 
 function filterEvents(filtredType, array, filtersObj) {
-    console.log(array);
+    // console.log(array);
     let newArray = [];
-    switch (filtredType) {
-        case "type":
-            newArray = array.filter((el) => {
-                return el.type === filtersObj.typeEvent.toLowerCase();
-            })
-            break;
-        case "distance":
-            newArray = array.filter((el) => {
-                return el.distance === filtersObj.distanceEvent;
-            })
-            break;
-        case "category":
-            newArray = array.filter((el) => {
-                return el.category === filtersObj.categoryEvent;
-            })
-            break;
+    newArray = array.filter((el) => {
+        return el.type === filtersObj.typeEvent.toLowerCase();
+    });
+    // console.log("Filtred array: ", newArray);
+    if (filtersObj.distanceEvent !== "Any distance") {
+        newArray = array.filter((el) => {
+            return el.distance === filtersObj.distanceEvent;
+        });
     }
-    console.log(newArray);
+    // console.log("Filtred array2: ", newArray);
+    if (filtersObj.categoryEvent !== "Any category") {
+        newArray = array.filter((el) => {
+            return el.category === filtersObj.categoryEvent;
+        });
+    }
+    // console.log("Filtred array3: ", newArray);
     createCard(newArray);
 }
+
+
+
