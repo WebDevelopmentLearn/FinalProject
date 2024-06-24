@@ -57,6 +57,9 @@
   .eventMainContainer .eventMainSubContainer {
     width: 100%;
   }
+  .eventsList {
+    width: 100%;
+  }
   /* ================ END OF MAIN ==================== */
   /* ================ START OF FOOTER ==================== */
   footer {
@@ -76,6 +79,55 @@
   .mapContainer {
     display: none;
   }
+  /* ======= EVENTS LIST START ======= */
+  .eventsList .eventContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+    max-height: 400px;
+    margin-top: 16px;
+  }
+  .eventsList .eventContainer .eventImage {
+    width: 98px;
+    height: 55px;
+  }
+  .eventsList .eventContainer .eventBadge {
+    display: none;
+  }
+  .eventsList .eventContainer .eventBadge.hidden {
+    display: none;
+  }
+  .eventsList .eventContainer .eventInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    max-width: 80%;
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventDateInfo {
+    font-size: 1rem;
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventTitleHeader {
+    font-size: 1rem;
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventType {
+    color: #707070;
+    display: initial;
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventType:before {
+    content: url("/assets/eventsPage/camera_icon.svg");
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 3px;
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventType:after {
+    content: " Event";
+  }
+  .eventsList .eventContainer .eventInfoContainer .eventAttendees {
+    display: none;
+  }
+  /* ======= EVENTS LIST END ======= */
   /* ================ END OF MAIN ==================== */
   /* ================ START OF FOOTER ==================== */
   .footerInfoContainer {

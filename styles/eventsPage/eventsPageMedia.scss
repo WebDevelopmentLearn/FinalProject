@@ -67,6 +67,10 @@
     }
   }
 
+  .eventsList {
+    width: 100%;
+  }
+
   /* ================ END OF MAIN ==================== */
 
 
@@ -89,15 +93,69 @@
     padding-bottom: 10px;
     overflow-y: auto;
     overflow-x: scroll;
-    //position: absolute;
-
   }
-
-
 
   .mapContainer {
     display: none;
   }
+
+  /* ======= EVENTS LIST START ======= */
+  .eventsList {
+
+
+    .eventContainer {
+      @include flexBox(row, normal, normal);
+
+      max-height: 400px;
+      margin-top: 16px;
+
+      .eventImage {
+        width: 98px;
+        height: 55px;
+      }
+
+      .eventBadge {
+        display: none;
+      }
+
+      .eventBadge.hidden {
+        display: none;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, start, start);
+        //gap: 4px;
+        max-width: 80%;
+        .eventDateInfo {
+          font-size: 1.0rem;
+          //color: #7C6F50;
+        }
+        .eventTitleHeader {
+          font-size: 1.0rem;
+        }
+        .eventType {
+          color: #707070;
+          display: initial;
+        }
+        .eventType:before {
+          content: url("/assets/eventsPage/camera_icon.svg");
+          @include iconInlineAlign(3px);
+        }
+
+        .eventType:after {
+          content: " Event";
+        }
+
+        .eventAttendees {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+
+  /* ======= EVENTS LIST END ======= */
 
 
   /* ================ END OF MAIN ==================== */

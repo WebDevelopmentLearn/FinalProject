@@ -80,28 +80,66 @@ function createCard(objArray) {
         const eventHr = document.createElement("hr");
         const eventContainer = document.createElement("div");
 
+        const eventImageContainer = document.createElement("div");
         const eventImage = document.createElement("img");
+        const eventBadge = document.createElement("div");
+        const eventBadgeType = document.createElement("p");
 
         const eventInfoContainer = document.createElement("div");
         const eventDateInfoPar = document.createElement("p");
         const eventTitleHeader = document.createElement("h4");
         const eventLocationInfo = document.createElement("p");
-
+        const eventType = document.createElement("p");
+        const eventAttendees = document.createElement("p");
 
         eventHr.classList.add("border");
+        eventImageContainer.classList.add("eventImageContainer");
+        eventImage.classList.add("eventImage");
+        eventBadge.classList.add("eventBadge");
+        eventBadgeType.classList.add("eventBadgeType");
         eventContainer.classList.add("eventContainer");
         eventInfoContainer.classList.add("eventInfoContainer");
         eventDateInfoPar.classList.add("eventDateInfo", "text500");
-        eventTitleHeader.classList.add("text500");
+        eventTitleHeader.classList.add("eventTitleHeader", "text500");
         eventLocationInfo.classList.add("eventLocationInfo");
-
+        eventType.classList.add("eventType");
+        eventAttendees.classList.add("eventAttendees");
+        // <p className="paidInfo">Free</p>
         eventDateInfoPar.textContent = eventObj.date;
         eventTitleHeader.textContent = eventObj.title;
         eventLocationInfo.textContent = eventObj.category;
+
+
+
+        if (eventObj.attendees) {
+            eventAttendees.textContent = eventObj.attendees;
+        }
+
         eventImage.setAttribute("src", `${eventObj.image}`);
 
         eventInfoContainer.append(eventDateInfoPar, eventTitleHeader, eventLocationInfo);
-        eventContainer.append(eventImage, eventInfoContainer);
+
+        if (eventAttendees.textContent !== "") {
+            eventInfoContainer.append(eventAttendees);
+        }
+        eventImageContainer.append(eventImage);
+        if (eventObj.type === "online") {
+            eventType.textContent = "Online";
+            eventBadgeType.textContent = "Online Event";
+            eventBadge.setAttribute("display", "block");
+            // if (window.innerWidth > 426) {
+            //     eventBadge.classList.remove("hidden");
+            // }
+            eventBadge.append(eventBadgeType);
+            eventImageContainer.append(eventBadge);
+
+            console.log(eventType.textContent);
+            if (eventType.textContent === "Online") {
+                eventInfoContainer.append(eventType);
+            }
+        }
+
+        eventContainer.append(eventImageContainer, eventInfoContainer);
         eventsList.append(eventHr, eventContainer);
 
 
@@ -161,7 +199,7 @@ function handleSelectMenu(selectMenu, selectForm) {
     }
 }
 
-function filterEvents(filtredType, array, filtersObj) {
+function filterEvents(array, filtersObj) {
     // console.log(array);
     let newArray = [];
     newArray = array.filter((el) => {
