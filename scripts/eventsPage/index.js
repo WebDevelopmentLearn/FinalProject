@@ -104,21 +104,14 @@ function createCard(objArray) {
         eventLocationInfo.classList.add("eventLocationInfo");
         eventType.classList.add("eventType");
         eventAttendees.classList.add("eventAttendees");
-        // <p className="paidInfo">Free</p>
         eventDateInfoPar.textContent = eventObj.date;
         eventTitleHeader.textContent = eventObj.title;
         eventLocationInfo.textContent = eventObj.category;
-
-
-
         if (eventObj.attendees) {
             eventAttendees.textContent = eventObj.attendees;
         }
-
         eventImage.setAttribute("src", `${eventObj.image}`);
-
         eventInfoContainer.append(eventDateInfoPar, eventTitleHeader, eventLocationInfo);
-
         if (eventAttendees.textContent !== "") {
             eventInfoContainer.append(eventAttendees);
         }
@@ -127,16 +120,9 @@ function createCard(objArray) {
             eventType.textContent = "Online";
             eventBadgeType.textContent = "Online Event";
             eventBadge.setAttribute("display", "block");
-            // if (window.innerWidth > 426) {
-            //     eventBadge.classList.remove("hidden");
-            // }
             eventBadge.append(eventBadgeType);
             eventImageContainer.append(eventBadge);
-
-            console.log(eventType.textContent);
-            if (eventType.textContent === "Online") {
-                eventInfoContainer.append(eventType);
-            }
+            eventInfoContainer.append(eventType);
         }
 
         eventContainer.append(eventImageContainer, eventInfoContainer);
@@ -174,23 +160,24 @@ function handleSelectMenu(selectMenu, selectForm) {
     });
 
     for (let i = 0; i < selectTypeEventLabels.length; i++) {
+        // console.log(selectTypeEventLabels[i]);
         selectTypeEventLabels[i].addEventListener('click', (evt) => {
             if (evt.target.closest("#selectTypeEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.typeEvent = evt.target.textContent;
-                filterEvents(eventsStore, selectedFilters);
+                filterEvents("type", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectDistanceEvent")) {
                 console.log(evt.target.textContent);
-                selectedFilters.distanceEvent = +evt.target.textContent.split("km")[0];
-                filterEvents(eventsStore, selectedFilters);
+                selectedFilters.distanceEvent = evt.target.textContent !== "Any distance" ? +evt.target.textContent.split("km")[0] : "Any distance";
+                filterEvents("distance", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectCategoryEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.categoryEvent = evt.target.textContent;
-                filterEvents(eventsStore, selectedFilters);
+                filterEvents("category", eventsStore, selectedFilters);
             }
-            console.log(selectedFilters);
+            // console.log(selectedFilters);
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
             eventsFiltersContainer.style.paddingBottom = `10px`;
@@ -199,25 +186,42 @@ function handleSelectMenu(selectMenu, selectForm) {
     }
 }
 
-function filterEvents(array, filtersObj) {
+function filterEvents(type, array, filtersObj) {
     // console.log(array);
     let newArray = [];
-    newArray = array.filter((el) => {
-        return el.type === filtersObj.typeEvent.toLowerCase();
-    });
+
+    switch (type) {
+        case "type":
+            if (filtersObj.typeEvent !== "Any type") {
+                newArray = array.filter((el) => {
+                    return el.type === filtersObj.typeEvent.toLowerCase();
+                });
+            } else {
+                newArray = array.slice();
+            }
+            break;
+        case "distance":
+            if (filtersObj.distanceEvent !== "Any distance") {
+                newArray = array.filter((el) => {
+                    return el.distance === filtersObj.distanceEvent;
+                });
+            } else {
+                newArray = array.slice();
+            }
+
+            break;
+        case "category":
+            if (filtersObj.categoryEvent !== "Any category") {
+                newArray = array.filter((el) => {
+                    return el.category === filtersObj.categoryEvent;
+                });
+            } else {
+                newArray = array.slice();
+            }
+            break;
+    }
+
     // console.log("Filtred array: ", newArray);
-    if (filtersObj.distanceEvent !== "Any distance") {
-        newArray = array.filter((el) => {
-            return el.distance === filtersObj.distanceEvent;
-        });
-    }
-    // console.log("Filtred array2: ", newArray);
-    if (filtersObj.categoryEvent !== "Any category") {
-        newArray = array.filter((el) => {
-            return el.category === filtersObj.categoryEvent;
-        });
-    }
-    // console.log("Filtred array3: ", newArray);
     createCard(newArray);
 }
 
