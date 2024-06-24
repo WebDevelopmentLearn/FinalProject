@@ -140,25 +140,29 @@ function handleSelectMenu(selectMenu, selectForm) {
             if (evt.target.closest("#selectTypeEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.typeEvent = evt.target.textContent;
+                filterEvents("type", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectDistanceEvent")) {
                 console.log(evt.target.textContent);
-                selectedFilters.distanceEvent = +selectedFilters.distanceEvent.split("km")[0];
+                selectedFilters.distanceEvent = +evt.target.textContent.split("km")[0];
+                filterEvents("distance", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectCategoryEvent")) {
                 console.log(evt.target.textContent);
                 selectedFilters.categoryEvent = evt.target.textContent;
+                filterEvents("category", eventsStore, selectedFilters);
             }
             console.log(selectedFilters);
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
             eventsFiltersContainer.style.paddingBottom = `10px`;
-            filterEvents("category", eventsStore, selectedFilters);
+
         });
     }
 }
 
 function filterEvents(filtredType, array, filtersObj) {
+    console.log(array);
     let newArray = [];
     switch (filtredType) {
         case "type":
@@ -168,7 +172,6 @@ function filterEvents(filtredType, array, filtersObj) {
             break;
         case "distance":
             newArray = array.filter((el) => {
-
                 return el.distance === filtersObj.distanceEvent;
             })
             break;
