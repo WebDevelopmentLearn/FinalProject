@@ -75,6 +75,7 @@ handleSelectMenu(selectCategoryEvent, selectCategoryForm);
 
 createCard(eventsStore);
 function createCard(objArray) {
+    eventsList.textContent = "";
     objArray.forEach((eventObj) => {
         const eventHr = document.createElement("hr");
         const eventContainer = document.createElement("div");
@@ -109,8 +110,12 @@ function createCard(objArray) {
 }
 
 
-let selectedFilters = [];
-
+let selectedFilters = {
+    typeEvent: "Any type",
+    distanceEvent: "Any distance",
+    categoryEvent: "Any category"
+};
+console.log(selectedFilters);
 function handleSelectMenu(selectMenu, selectForm) {
     const selectTypeEventTitle = selectMenu.querySelector(".selectMenuEventTitle");
     const selectTypeEventLabels = selectMenu.querySelectorAll(".__select__label");
@@ -132,11 +137,47 @@ function handleSelectMenu(selectMenu, selectForm) {
 
     for (let i = 0; i < selectTypeEventLabels.length; i++) {
         selectTypeEventLabels[i].addEventListener('click', (evt) => {
+            if (evt.target.closest("#selectTypeEvent")) {
+                console.log(evt.target.textContent);
+                selectedFilters.typeEvent = evt.target.textContent;
+            }
+            if (evt.target.closest("#selectDistanceEvent")) {
+                console.log(evt.target.textContent);
+                selectedFilters.distanceEvent = +selectedFilters.distanceEvent.split("km")[0];
+            }
+            if (evt.target.closest("#selectCategoryEvent")) {
+                console.log(evt.target.textContent);
+                selectedFilters.categoryEvent = evt.target.textContent;
+            }
+            console.log(selectedFilters);
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
-            console.log(selectTypeEventTitle.textContent);
             eventsFiltersContainer.style.paddingBottom = `10px`;
+            filterEvents("category", eventsStore, selectedFilters);
         });
     }
 }
 
+function filterEvents(filtredType, array, filtersObj) {
+    let newArray = [];
+    switch (filtredType) {
+        case "type":
+            newArray = array.filter((el) => {
+                return el.type === filtersObj.typeEvent.toLowerCase();
+            })
+            break;
+        case "distance":
+            newArray = array.filter((el) => {
+
+                return el.distance === filtersObj.distanceEvent;
+            })
+            break;
+        case "category":
+            newArray = array.filter((el) => {
+                return el.category === filtersObj.categoryEvent;
+            })
+            break;
+    }
+    console.log(newArray);
+    createCard(newArray);
+}
