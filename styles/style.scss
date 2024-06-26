@@ -21,7 +21,7 @@ button {
 
 nav {
   @include flexBox(row, space-between, center);
-  margin: 0 3% 0 1%;
+  margin: 0 24px 24px 24px;
 }
 
 /* ======= LOGO CONTAINER START ======= */
