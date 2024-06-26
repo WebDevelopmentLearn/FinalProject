@@ -44,10 +44,13 @@ main {
   background-color: #F6F7F8;
   border-radius: 40px;
   transition: border-radius 0.5s;
+  font-weight: 500;
+  font-size: 1.4rem;
   &[data-state="active"] {
     border-radius: 20px 20px 0 0;
 
     .selectMenuEventTitle {
+
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
       }
@@ -148,6 +151,14 @@ main {
 /* ======= MAP CONTAINER START ======= */
 .mapContainer {
   max-width: 100%;
+
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
   .google_map {
     max-width: 100%;
   }
@@ -228,8 +239,12 @@ main {
         display: none;
       }
 
+      .eventLocationInfo {
+        font-size: 1.4rem;
+      }
 
       .eventAttendees {
+        font-size: 1.4rem;
         margin-top: 28px;
         &:after {
           content: " attendees";

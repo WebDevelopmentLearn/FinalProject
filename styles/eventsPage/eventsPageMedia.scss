@@ -61,7 +61,7 @@
   .eventMainContainer {
     @include flexBox(column, center, start);
     flex-wrap: wrap;
-
+    margin-top: 18px;
     .eventMainSubContainer {
       width: 100%;
     }
@@ -93,6 +93,18 @@
     padding-bottom: 10px;
     overflow-y: auto;
     overflow-x: scroll;
+  }
+
+  .selectMenuEventContent {
+    position: static;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.3s ease-out;
   }
 
   .mapContainer {

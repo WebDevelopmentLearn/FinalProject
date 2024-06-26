@@ -20,9 +20,10 @@
     <title>Events Page</title>
   </head>
   <body>
+  <!--  ================ START OF NAV ====================-->
   <nav>
     <div class="logoContainer">
-      <a href="#">
+      <a href="./mainPage.html">
         <img src="./assets/logo.svg" alt="logo" />
       </a>
     </div>
@@ -49,17 +50,20 @@
       <button class="signUpBtn text500">Sign up</button>
     </div>
   </nav>
-    <main>
+  <!--  ================ END OF NAV ====================-->
 
-      <div class="eventMainContainer">
-        <div class="eventMainSubContainer">
+  <!--  ================ START OF MAIN ====================-->
+  <main>
+    <!--  ================ START OF EVENTS MAIN ====================-->
+    <section class="eventMainContainer">
+      <div class="eventMainSubContainer">
           <h1>Events near New York, NY</h1>
           <div class="eventsHeader2Container">
             <h2 id="eventsHeader2">Events</h2>
           </div>
 
          <div class="eventsFiltersContainer">
-           <div id="selectTypeEvent" class="selectMenu" data-state="">
+           <form id="selectTypeEvent" class="selectMenu" data-state="">
              <div class="selectMenuEventTitle" data-default="Option 0">Any type</div>
              <div class="selectMenuEventContent">
 
@@ -76,9 +80,9 @@
                <label for="selectType3" class="__select__label">Offline</label>
 
              </div>
-           </div>
+           </form>
 
-           <div id="selectDistanceEvent" class="selectMenu" data-state="">
+           <form id="selectDistanceEvent" class="selectMenu" data-state="">
              <div class="selectMenuEventTitle" data-default="Option 0">Any distance</div>
              <div class="selectMenuEventContent">
 
@@ -109,9 +113,9 @@
                <input id="singleSelect8" class="__select__input" type="radio" name="singleSelect" />
                <label for="singleSelect8" class="__select__label">100 km</label>
              </div>
-           </div>
+           </form>
 
-           <div id="selectCategoryEvent" class="selectMenu" data-state="">
+           <form id="selectCategoryEvent" class="selectMenu" data-state="">
              <div class="selectMenuEventTitle" data-default="Option 0">Any category</div>
              <div class="selectMenuEventContent">
 
@@ -137,25 +141,27 @@
                <label for="selectCategory6" class="__select__label">Technology</label>
 
              </div>
-           </div>
+           </form>
          </div>
           <div class="eventsList"></div>
       </div>
-        <div class="mapContainer">
+      <div class="mapContainer">
           <p>Find events near</p>
           <h2>New York, NY</h2>
-          <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181346.89257609643!2d-74.13556746171338!3d40.69947723323629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sde!4v1718307067883!5m2!1sen!2sde" width="350" height="285" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81337.6255934236!2d-74.02238664170113!3d40.74601916466133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sde!4v1719396913397!5m2!1sru!2sde" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+    </section>
+    <!--  ================ END OF EVENTS MAIN ====================-->
+  </main>
+  <!--  ================ END OF MAIN ====================-->
 
-      </div>
-
-    </main>
-    <footer>
-      <div class="footerInfoContainer">
+  <!--  ================ START OF FOOTER ====================-->
+  <footer>
+    <div class="footerInfoContainer">
         <h4 class="text600">Create your own Meetup group.</h4>
         <button class="text600">Get Started</button>
       </div>
-      <div class="footerLinksContainer">
+    <div class="footerLinksContainer">
         <div>
           <h4>Your Account</h4>
           <a href="#">Sign up</a>
@@ -183,8 +189,7 @@
           <a href="#">Podcast</a>
         </div>
       </div>
-
-      <div class="followsLinks">
+    <div class="followsLinks">
         <div class="followContainer">
           <h4>Follow us</h4>
           <div class="socialPagesContainer">
@@ -214,8 +219,7 @@
           </a>
         </div>
       </div>
-
-      <div class="footerAdditionInfoContainer">
+    <div class="footerAdditionInfoContainer">
         <p>© 2024 Meetup</p>
         <a href="#">Terms of Service</a>
         <a href="#">Privacy Policy</a>
@@ -223,8 +227,10 @@
         <a href="#">Cookie Policy</a>
         <a href="#">Help</a>
       </div>
-    </footer>
-
+  </footer>
+  <!--  ================ END OF FOOTER ====================-->
   </body>
-  <script type="module" src="./scripts/eventsPage/index.js"></script>
+  <!-- Подключение скриптов -->
+  <script type="module" src="scripts/eventsPage/eventsPageIndex.js"></script>
+  <!-- Подключение скриптов -->
 </html>
