@@ -86,7 +86,7 @@ function handleSelectMenu(selectMenu, selectForm) {
             eventsFiltersContainer.style.paddingBottom = `10px`;
         } else {
             selectMenu.setAttribute('data-state', 'active');
-            // eventsFiltersContainer.style.paddingBottom = `${selectTypeEventLabels.length * 40}px`;
+            eventsFiltersContainer.style.paddingBottom = `${selectTypeEventLabels.length * 40}px`;
         }
     });
 
