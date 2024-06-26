@@ -6,6 +6,7 @@
 main {
   @include flexBox(column, center, center);
   padding: 0 10% 0 10%;
+  margin-top: 46px;
 }
 
 
@@ -16,6 +17,7 @@ main {
   //max-width: 1140px;
   //margin: 5% 10%;
   gap: 45px;
+  margin-bottom: 100px;
 
 
   .aboutUsInfoContainer {
@@ -28,6 +30,7 @@ main {
 
     p {
       font-size: 1.6rem;
+      line-height: 24px;
     }
 
     a {
@@ -37,6 +40,7 @@ main {
       padding: 8px 16px;
       border-radius: 8px;
       font-size: 1.6rem;
+      text-align: center;
     }
   }
 }
@@ -48,6 +52,7 @@ main {
   @include flexBox(row, space-between, center);
   //max-width: 1140px;
   width: 100%;
+  margin-top: 24px;
 
   .leftEventContainer {
     @include flexBox(row, space-between, center);
@@ -111,10 +116,12 @@ main {
     gap: 10px;
     h4 {
       font-size: 2.0rem;
+      font-weight: 600;
     }
 
     p {
       font-size: 1.4rem;
+
       color: #212121;
     }
 
@@ -184,14 +191,14 @@ main {
 
   p {
     font-size: 1.6rem;
-
+    line-height: 24px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
   }
 
-  button {
+  a {
     width: 192px;
     height: 40px;
     border: none;
@@ -199,6 +206,7 @@ main {
     color: #ffffff;
     padding: 8px 66px;
     border-radius: 8px;
+    text-decoration: none;
 
     grid-row-start: 3;
     grid-row-end: 3;
@@ -372,6 +380,7 @@ main {
   @include flexBox(row, center, normal);
   flex-wrap: wrap;
   gap: 32px;
+  margin-bottom: 24px;
 
   div {
     @include flexBox(column, start, start);

@@ -63,6 +63,7 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0;
     .aboutUsInfoContainer {
       gap: 20px;
       width: 100%;
@@ -194,7 +195,7 @@
       line-height: 24px;
     }
 
-    button {
+    a {
       margin-top: 16px;
     }
 
