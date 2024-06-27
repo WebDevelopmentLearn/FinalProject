@@ -1,5 +1,6 @@
 @import "../mixins";
 @import "../universalStyles";
+@import "../constants";
 
 /* ================ START OF MAIN PAGE ==================== */
 
@@ -7,17 +8,16 @@ main {
   @include flexBox(column, center, center);
   padding: 0 10% 0 10%;
   margin-top: 46px;
+  gap: 40px;
 }
 
 
 /* ======= ABOUT US CONTAINER START ======= */
 .aboutUsContainer {
   @include flexBox(row, space-between, center);
-  width: 100%;
-  //max-width: 1140px;
-  //margin: 5% 10%;
+  width: $width100;
   gap: 45px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 
 
   .aboutUsInfoContainer {
@@ -29,17 +29,17 @@ main {
     }
 
     p {
-      font-size: 1.6rem;
-      line-height: 24px;
+      font-size: $fzMedium;
+      line-height: $lineHeight;
     }
 
     a {
-      background-color: #00798A;
-      color: #ffffff;
+      background-color: $aquaBlueBg;
+      color: $whiteFont;
       text-decoration: none;
       padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 1.6rem;
+      border-radius: $borderRadius8x;
+      font-size: $fzMedium;
       text-align: center;
     }
   }
@@ -51,7 +51,7 @@ main {
 .eventsContainer {
   @include flexBox(row, space-between, center);
   //max-width: 1140px;
-  width: 100%;
+  width: $width100;
   margin-top: 24px;
 
   .leftEventContainer {
@@ -59,20 +59,20 @@ main {
     gap: 25px;
 
     h3 {
-      font-size: 2.8rem;
+      font-size: $fzBig28;
     }
 
     button {
       background-color: #97CAD11F;
       border: none;
-      border-radius: 8px;
+      border-radius: $borderRadius8x;
       @include flexBox(row, center, center);
       gap: 8px;
       padding: 12px 12px 8px 12px;
 
       span {
-        font-size: 2.0rem;
-        color: #00798A;
+        font-size: $fzMedium2;
+        color: $aquaBlueFont;
       }
     }
   }
@@ -80,8 +80,8 @@ main {
   .seeAllEventsContainer {
     a {
       text-decoration: none;
-      font-size: 1.6rem;
-      color: #00798A;
+      font-size: $fzMedium;
+      color: $aquaBlueFont;
     }
   }
 }
@@ -92,14 +92,18 @@ main {
 
 /* ======= NEAR EVENTS CONTAINER START ======= */
 
+.nearEvents {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
 .nearEventsContainer {
   @include flexBox(row, space-between, normal);
   flex-wrap: wrap;
   gap: 36px;
-  width: 100%;
+  width: $width100;
   margin-top: 24px;
-  margin-bottom: 36px;
-  //margin: 24px 100px 0 100px;
+
 
   div {
     padding-bottom: 10px;
@@ -115,18 +119,17 @@ main {
     @include flexBox(column, center, start);
     gap: 10px;
     h4 {
-      font-size: 2.0rem;
+      font-size: $fzMedium2;
       font-weight: 600;
     }
 
     p {
       font-size: 1.4rem;
-
-      color: #212121;
+      color: $darkGrayFont;
     }
 
     .eventLocationInfo {
-      color: #707070;
+      color: $grayFont;
     }
 
     .eventDateInfo:before {
@@ -138,7 +141,7 @@ main {
       @include flexBox(row, start, center);
       gap: 16px;
       .membersWaitingInfo {
-        font-size: 1.6rem;
+        font-size: $fzMedium;
         &:before {
           content: url("/assets/mainPage/main/check_icon.svg");
            @include iconInlineAlign();
@@ -146,7 +149,7 @@ main {
       }
 
       .paidInfo {
-        font-size: 1.6rem;
+        font-size: $fzMedium;
         &:before {
           content: url("/assets/mainPage/main/ticket_icon.svg");
            @include iconInlineAlign();
@@ -160,6 +163,11 @@ main {
 /* ======= NEAR EVENTS CONTAINER END ======= */
 
 /* ======= UPCOMING EVENTS CONTAINER START ======= */
+
+.upcomingEvents {
+  margin-bottom: 24px;
+}
+
 .upcomingEventsContainer {
   @extend .nearEventsContainer;
 }
@@ -167,14 +175,14 @@ main {
 
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
-  width: 100%;
+  width: $width100;
   display: grid;
   grid-template-columns: 2fr 1fr;//Колонки( вверх/вниз)
   column-gap: 20px;
   background-color: #97CAD114;
-  border-radius: 8px;
+  border-radius: $borderRadius8x;
   padding: 16px 56px;
-  margin-bottom: 64px;
+  //margin-bottom: 64px;
 
   #joinImg {
     grid-row-start: 1;
@@ -186,12 +194,12 @@ main {
   }
 
   h2 {
-    font-size: 2.8rem;
+    font-size: $fzBig28;
   }
 
   p {
-    font-size: 1.6rem;
-    line-height: 24px;
+    font-size: $fzMedium;
+    line-height: $lineHeight;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -203,9 +211,9 @@ main {
     height: 40px;
     border: none;
     background-color: #E32359;
-    color: #ffffff;
+    color: $whiteFont;
     padding: 8px 66px;
-    border-radius: 8px;
+    border-radius: $borderRadius8x;
     text-decoration: none;
 
     grid-row-start: 3;
@@ -213,7 +221,7 @@ main {
     grid-column-start: 1;
     grid-column-end: 1;
 
-    font-size: 1.6rem;
+    font-size: $fzMedium;
   }
 }
 /* ======= JOIN CONTAINER END ======= */
@@ -222,10 +230,11 @@ main {
 /* ======= TOP CATEGORIES CONTAINER START ======= */
 
 .topCategoriesContainer {
-  width: 100%;
-  margin-bottom: 24px;
+  width: $width100;
+  margin-top: $marginT;
+  margin-bottom: $marginB;
   h2 {
-    font-size: 2.8rem;
+    font-size: $fzBig28;
     margin-bottom: 24px;
   }
 }
@@ -239,13 +248,13 @@ main {
     width: 135px;
     height: 112px;
     background-color: #97CAD114;
-    border-radius: 8px;
+    border-radius: $borderRadius8x;
     @include flexBox(column, center, center);
     gap: 6px;
     padding: 16px;
 
     p {
-      font-size: 1.6rem;
+      font-size: $fzMedium;
       text-align: center;
     }
   }
@@ -258,17 +267,17 @@ main {
 /* ======= POPULAR CITIES CONTAINER START ======= */
 
 .popularCitiesContainer {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 24px;
+  width: $width100;
+  margin-top: $marginT;
+  //margin-bottom: $marginB;
   h2 {
-    font-size: 2.8rem;
+    font-size: $fzBig28;
     margin-bottom: 24px;
   }
 
   p {
-    font-size: 1.6rem;
-    color: #707070;
+    font-size: $fzMedium;
+    color: $grayFont;
   }
 }
 
@@ -277,19 +286,14 @@ main {
   flex-wrap: wrap;
   gap: 42px;
   margin-top: 28px;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
 
   div {
-    //width: 135px;
-    //height: 112px;
-    //background-color: #97CAD114;
-    //border-radius: 8px;
     @include flexBox(column, center, center);
     gap: 24px;
-    //padding: 16px;
 
     p {
-      font-size: 2.0rem;
+      font-size: $fzMedium2;
       text-align: center;
     }
   }
@@ -302,10 +306,11 @@ main {
 /* ======= HOW MEET WORKS CONTAINER START ======= */
 
 .howMeetWorksContainer {
-  width: 100%;
-  margin-bottom: 40px;
+  width: $width100;
+  margin-top: $marginT;
+  //margin-bottom: 40px;
   h2 {
-    font-size: 2.8rem;
+    font-size: $fzBig28;
     margin-bottom: 24px;
   }
 
@@ -319,7 +324,7 @@ main {
     @include flexBox(row, start, start);
     gap: 24px;
     background-color: #97CAD114;
-    border-radius: 8px;
+    border-radius: $borderRadius8x;
     padding: 32px 24px;
     width: 580px;
   }
@@ -333,17 +338,17 @@ main {
     gap: 16px;
     max-width: 380px;
     h4 {
-      font-size: 2.0rem;
+      font-size: $fzMedium2;
     }
 
     p {
-      font-size: 1.6rem;
+      font-size: $fzMedium;
     }
 
     a {
-      font-size: 1.6rem;
+      font-size: $fzMedium;
       text-decoration: none;
-      color: #00798A;
+      color: $aquaBlueFont;
     }
   }
 }
@@ -356,18 +361,18 @@ main {
 /* ======= FRIENDSHIPS MEET CONTAINER START ======= */
 
 .friendshipsMeetContainer {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 24px;
+  width: $width100;
+  margin-top: $marginT;
+  margin-bottom: $marginB;
 
   h2 {
-    font-size: 2.8rem;
+    font-size: $fzBig28;
   }
 
   p {
-    font-size: 1.6rem;
-    color: #707070;
-    line-height: 24px;
+    font-size: $fzMedium;
+    color: $grayFont;
+    line-height: $lineHeight;
   }
 
   .friendshipsDesc {
@@ -380,7 +385,7 @@ main {
   @include flexBox(row, center, normal);
   flex-wrap: wrap;
   gap: 32px;
-  margin-bottom: 24px;
+  margin-bottom: $marginB;
 
   div {
     @include flexBox(column, start, start);
@@ -393,19 +398,19 @@ main {
     }
     h4 {
       font-size: 1.8rem;
-      color: #212121;
+      color: $darkGrayFont;
     }
 
     p {
-      font-size: 1.6rem;
-      line-height: 24px;
+      font-size: $fzMedium;
+      line-height: $lineHeight;
     }
 
     a {
-      font-size: 1.6rem;
+      font-size: $fzMedium;
       margin-top: 4px;
       text-decoration: none;
-      color: #00798A;
+      color: $aquaBlueFont;
     }
   }
 }
@@ -414,106 +419,6 @@ main {
 
 /* ================ END OF MAIN PAGE ==================== */
 
-/* ================ START OF FOOTER ==================== */
-footer {
-  background-color: #212121;
-  padding: 35px 195px;
-
-
-}
-
-
-.footerInfoContainer {
-  @include flexBox(row, start, center);
-  //flex-wrap: wrap;
-  gap: 16px;
-  width: 100%;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #707070;
-
-  h4 {
-    font-size: 1.6rem;
-    color: #ffffff;
-  }
-
-  button {
-    border-radius: 6px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    background-color: transparent;
-    padding: 10px 25px 10px 14px;
-    //margin-bottom: 25px;
-  }
-}
-
-.footerLinksContainer {
-  @include flexBox(row, start, start);
-  margin-top: 24px;
-  //flex-wrap: wrap;
-  div {
-    @include flexBox(column, start, start);
-    width: 100%;
-    gap: 7px;
-    h4 {
-      font-size: 1.6rem;
-      color: #F6F7F8;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 1.4rem;
-      color: #C5C4C4;
-    }
-  }
-}
-
-
-.followsLinks {
-  @include flexBox(row, space-between, center);
-  margin-top: 24px;
-  flex-wrap: wrap;
-
-  .followContainer {
-    @include flexBox(column, center, start);
-
-    h4 {
-      font-size: 1.6rem;
-      color: #F6F7F8;
-    }
-  }
-
-  .socialPagesContainer {
-    @include flexBox(row, space-between, center);
-    margin-top: 12px;
-    margin-bottom: 24px;
-    gap: 35px;
-  }
-
-  .downloadsStoresContainer {
-    @include flexBox(row, space-between, center);
-    gap: 24px;
-    margin-bottom: 24px;
-  }
-}
-
-.footerAdditionInfoContainer {
-  @include flexBox(row, start, center);
-
-  flex-wrap: wrap;
-  gap: 24px;
-  p {
-    font-size: 1.4rem;
-    color: #ffffff;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    color: #C5C4C4;
-  }
-}
-//35px 25px
-/* ================ END OF FOOTER ==================== */
 
 
 

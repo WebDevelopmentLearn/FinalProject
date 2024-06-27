@@ -26,6 +26,7 @@ main {
   align-items: center;
   padding: 0 10% 0 10%;
   margin-top: 46px;
+  gap: 40px;
 }
 
 /* ======= ABOUT US CONTAINER START ======= */
@@ -36,7 +37,7 @@ main {
   align-items: center;
   width: 100%;
   gap: 45px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .aboutUsContainer .aboutUsInfoContainer {
   display: flex;
@@ -54,7 +55,7 @@ main {
   line-height: 24px;
 }
 .aboutUsContainer .aboutUsInfoContainer a {
-  background-color: #00798A;
+  background-color: #00798a;
   color: #ffffff;
   text-decoration: none;
   padding: 8px 16px;
@@ -96,16 +97,21 @@ main {
 }
 .eventsContainer .leftEventContainer button span {
   font-size: 2rem;
-  color: #00798A;
+  color: #00798a;
 }
 .eventsContainer .seeAllEventsContainer a {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #00798A;
+  color: #00798a;
 }
 
 /* ======= EVENTS CONTAINER END ======= */
 /* ======= NEAR EVENTS CONTAINER START ======= */
+.nearEvents {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
 .nearEventsContainer, .upcomingEventsContainer {
   display: flex;
   flex-direction: row;
@@ -115,7 +121,6 @@ main {
   gap: 36px;
   width: 100%;
   margin-top: 24px;
-  margin-bottom: 36px;
 }
 .nearEventsContainer div, .upcomingEventsContainer div {
   padding-bottom: 10px;
@@ -177,6 +182,10 @@ main {
 
 /* ======= NEAR EVENTS CONTAINER END ======= */
 /* ======= UPCOMING EVENTS CONTAINER START ======= */
+.upcomingEvents {
+  margin-bottom: 24px;
+}
+
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
@@ -187,7 +196,6 @@ main {
   background-color: rgba(151, 202, 209, 0.0784313725);
   border-radius: 8px;
   padding: 16px 56px;
-  margin-bottom: 64px;
 }
 .joinContainer #joinImg {
   grid-row-start: 1;
@@ -228,6 +236,7 @@ main {
 /* ======= TOP CATEGORIES CONTAINER START ======= */
 .topCategoriesContainer {
   width: 100%;
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 .topCategoriesContainer h2 {
@@ -264,8 +273,7 @@ main {
 /* ======= POPULAR CITIES CONTAINER START ======= */
 .popularCitiesContainer {
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 24px;
+  margin-top: 24px;
 }
 .popularCitiesContainer h2 {
   font-size: 2.8rem;
@@ -284,7 +292,6 @@ main {
   flex-wrap: wrap;
   gap: 42px;
   margin-top: 28px;
-  margin-bottom: 40px;
 }
 .popularCitiesList div {
   display: flex;
@@ -302,7 +309,7 @@ main {
 /* ======= HOW MEET WORKS CONTAINER START ======= */
 .howMeetWorksContainer {
   width: 100%;
-  margin-bottom: 40px;
+  margin-top: 24px;
 }
 .howMeetWorksContainer h2 {
   font-size: 2.8rem;
@@ -350,14 +357,14 @@ main {
 .howMeetWorksList .howMeetWorksInfoContainer a {
   font-size: 1.6rem;
   text-decoration: none;
-  color: #00798A;
+  color: #00798a;
 }
 
 /* ======= HOW MEET WORKS CONTAINER END ======= */
 /* ======= FRIENDSHIPS MEET CONTAINER START ======= */
 .friendshipsMeetContainer {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 .friendshipsMeetContainer h2 {
@@ -406,118 +413,10 @@ main {
   font-size: 1.6rem;
   margin-top: 4px;
   text-decoration: none;
-  color: #00798A;
+  color: #00798a;
 }
 
 /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
 /* ================ END OF MAIN PAGE ==================== */
-/* ================ START OF FOOTER ==================== */
-footer {
-  background-color: #212121;
-  padding: 35px 195px;
-}
-
-.footerInfoContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #707070;
-}
-.footerInfoContainer h4 {
-  font-size: 1.6rem;
-  color: #ffffff;
-}
-.footerInfoContainer button {
-  border-radius: 6px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  background-color: transparent;
-  padding: 10px 25px 10px 14px;
-}
-
-.footerLinksContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: start;
-  margin-top: 24px;
-}
-.footerLinksContainer div {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  width: 100%;
-  gap: 7px;
-}
-.footerLinksContainer div h4 {
-  font-size: 1.6rem;
-  color: #F6F7F8;
-}
-.footerLinksContainer div a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  color: #C5C4C4;
-}
-
-.followsLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-.followsLinks .followContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-.followsLinks .followContainer h4 {
-  font-size: 1.6rem;
-  color: #F6F7F8;
-}
-.followsLinks .socialPagesContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-  margin-bottom: 24px;
-  gap: 35px;
-}
-.followsLinks .downloadsStoresContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 24px;
-}
-
-.footerAdditionInfoContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.footerAdditionInfoContainer p {
-  font-size: 1.4rem;
-  color: #ffffff;
-}
-.footerAdditionInfoContainer a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  color: #C5C4C4;
-}
-
-/* ================ END OF FOOTER ==================== */
 
 /*# sourceMappingURL=mainPageStyle.css.map */
