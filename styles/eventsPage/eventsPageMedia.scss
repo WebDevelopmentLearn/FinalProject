@@ -4,56 +4,6 @@
 /* ================ START OF ADAPTIVE 768px ==================== */
 @media screen and (max-width: 768px) {
 
-  /* ================ START OF NAV ==================== */
-  nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2px;
-    margin: 0;
-  }
-
-  /* ======= LOGO CONTAINER START ======= */
-
-  .logoContainer {
-    margin-left: 24px;
-    grid-row-start: 1;
-    grid-column-start: 1;
-  }
-
-  /* ======= LOGO CONTAINER END ======= */
-
-  /* ======= SEARCH CONTAINER START ======= */
-  .searchContainer {
-    grid-column: span 2;
-
-    #searchInput {
-      width: 80vw;
-      border-right: none;
-    }
-
-    #searchCityInput {
-      display: none;
-    }
-  }
-  /* ======= SEARCH CONTAINER END ======= */
-
-  /* ======= RIGHT CONTAINER START ======= */
-  .rightNavContainer {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    @include flexBox(row, end, center);
-    gap: 16px;
-    margin-right: 8px;
-
-    a {
-      font-size: $fzSmall;
-    }
-  }
-  /* ======= RIGHT CONTAINER END ======= */
-
-  /* ================ END OF NAV ==================== */
-
   /* ================ START OF MAIN ==================== */
   main {
     padding: 0 15px 0 15px;
@@ -74,14 +24,6 @@
 
   /* ================ END OF MAIN ==================== */
 
-
-
-
-  /* ================ START OF FOOTER ==================== */
-  footer {
-    padding: 35px 25px;
-  }
-  /* ================ END OF FOOTER ==================== */
 }
 /* ================ END OF ADAPTIVE 768px ==================== */
 
@@ -89,7 +31,6 @@
 @media screen and (max-width: 426px) {
 
   /* ================ START OF MAIN ==================== */
-
   .eventsFiltersContainer {
     padding-bottom: 10px;
     //overflow-y: auto;
@@ -105,10 +46,8 @@
   /* ======= EVENTS LIST START ======= */
   .eventsList {
 
-
     .eventContainer {
       @include flexBox(row, normal, normal);
-
       max-height: 400px;
       margin-top: 16px;
 
@@ -127,19 +66,20 @@
 
       .eventInfoContainer {
         @include flexBox(column, start, start);
-        //gap: 4px;
         max-width: 80%;
         .eventDateInfo {
           font-size: 1.0rem;
-          //color: #7C6F50;
         }
+
         .eventTitleHeader {
           font-size: 1.0rem;
         }
+
         .eventType {
-          color: #707070;
           display: initial;
+          color: #707070;
         }
+
         .eventType:before {
           content: url("/assets/eventsPage/camera_icon.svg");
           @include iconInlineAlign(3px);
@@ -156,37 +96,8 @@
     }
 
   }
-
-
   /* ======= EVENTS LIST END ======= */
 
-
   /* ================ END OF MAIN ==================== */
-
-
-  /* ================ START OF FOOTER ==================== */
-
-  .footerInfoContainer {
-    gap: 5px;
-  }
-
-  .footerLinksContainer {
-    gap: 5px;
-  }
-
-  .followsLinks {
-    .downloadsStoresContainer {
-      display: none;
-    }
-
-  }
-  .footerAdditionInfoContainer {
-    a {
-      display: none;
-    }
-  }
-
-  /* ================ END OF FOOTER ==================== */
 }
 /* ================ END OF ADAPTIVE 426px ==================== */
-//@media screen and (min-width: 600px)

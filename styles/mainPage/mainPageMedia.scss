@@ -3,57 +3,6 @@
 
 /* ================ START OF ADAPTIVE 768px ==================== */
 @media screen and (max-width: 768px) {
-  /* ================ START OF NAV ==================== */
-  nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2px;
-    margin: 0;
-  }
-
-  /* ======= LOGO CONTAINER START ======= */
-
-  .logoContainer {
-    margin-left: 24px;
-    grid-row-start: 1;
-    grid-column-start: 1;
-  }
-
-  /* ======= LOGO CONTAINER END ======= */
-
-  /* ======= SEARCH CONTAINER START ======= */
-  .searchContainer {
-    grid-column: span 2;
-
-    #searchInput {
-      width: 80vw;
-      border-right: none;
-    }
-
-    #searchCityInput {
-      display: none;
-    }
-  }
-  /* ======= SEARCH CONTAINER END ======= */
-
-  /* ======= RIGHT CONTAINER START ======= */
-  .rightNavContainer {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    @include flexBox(row, end, center);
-    gap: 16px;
-    margin-right: 8px;
-
-    a {
-      font-size: $fzSmall;
-    }
-  }
-  /* ======= RIGHT CONTAINER END ======= */
-
-  /* ================ END OF NAV ==================== */
-
-
   /* ================ START OF MAIN PAGE ==================== */
 
   main {
@@ -61,13 +10,13 @@
   }
 
   .aboutUsContainer {
-    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 0;
+    gap: 20px;
     .aboutUsInfoContainer {
-      gap: 20px;
       width: $width100;
+      gap: 20px;
       h1 {
         font-size: 2.5rem;
       }
@@ -97,7 +46,6 @@
   /* ======= EVENTS CONTAINER START ======= */
   .eventsContainer {
     width: $width100;
-
 
     .leftEventContainer {
       h3 {
@@ -208,12 +156,9 @@
   /* ======= HOW MEET WORKS CONTAINER START ======= */
 
   .howMeetWorksContainer {
-
     h2 {
       font-size: 2.0rem;
-
     }
-
   }
 
   .howMeetWorksList {
@@ -221,7 +166,6 @@
     gap: 12px;
     ////flex-wrap: wrap;
     .howMeetWorksSubContainer {
-
       width: $width100;
     }
 
@@ -229,20 +173,6 @@
 
   /* ======= HOW MEET WORKS CONTAINER END ======= */
 
-
-
-
-
-
-
-  /* ================ START OF FOOTER ==================== */
-  footer {
-    padding: 35px 25px;
-  }
-
-
-
-  /* ================ END OF FOOTER ==================== */
 }
 /* ================ END OF ADAPTIVE 768px ==================== */
 
@@ -288,12 +218,10 @@
 
           .membersWaitingInfo {
             font-size: 1.0rem;
-
           }
 
           .paidInfo {
             font-size: 1.0rem;
-
           }
         }
       }
@@ -336,7 +264,6 @@
 
           .membersWaitingInfo {
             font-size: 1.0rem;
-
           }
 
           .paidInfo {
@@ -377,7 +304,6 @@
   .topCategoriesContainer {
     h2 {
       font-size: 2.0rem;
-
     }
   }
 
@@ -387,47 +313,29 @@
 
 
   /* ======= POPULAR CITIES CONTAINER START ======= */
-
   .popularCitiesContainer {
     margin-top: 24px;
     margin-bottom: 24px;
     h2 {
-      font-size: 2.0rem;
       margin-bottom: 10px;
+      font-size: 2.0rem;
     }
 
     p {
       font-size: $fzSmall;
-
     }
   }
 
   .popularCitiesList {
-    //@include flexBox(row, center, normal);
-    //flex-wrap: wrap;
     gap: 18px;
-    //margin-top: 28px;
-    //
     div {
       width: 155px;
 
       img {
         width: $width100;
       }
-      //height: 112px;
-      //background-color: #97CAD114;
-      //border-radius: 8px;
-      //@include flexBox(column, center, center);
-      //gap: 24px;
-      ////padding: 16px;
-      //
-      //p {
-      //  font-size: 2.0rem;
-      //  text-align: center;
-      //}
     }
   }
-
   /* ======= POPULAR CITIES CONTAINER END ======= */
 
 
@@ -445,7 +353,6 @@
   .howMeetWorksList {
     @include flexBox(column, center, center);
     gap: 12px;
-    ////flex-wrap: wrap;
     .howMeetWorksSubContainer {
       width: $width100;
       gap: 12px;
@@ -515,36 +422,5 @@
   }
 
   /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
-
-
-
-
-
-  /* ================ START OF FOOTER ==================== */
-
-  .footerInfoContainer {
-    gap: 5px;
-  }
-
-  .footerLinksContainer {
-    gap: 5px;
-  }
-
-  .followsLinks {
-    .downloadsStoresContainer {
-      display: none;
-    }
-
-  }
-  .footerAdditionInfoContainer {
-    a {
-      display: none;
-    }
-  }
-
-  /* ================ END OF FOOTER ==================== */
 }
 /* ================ END OF ADAPTIVE 426px ==================== */
-//@media screen and (min-width: 600px)
-
-

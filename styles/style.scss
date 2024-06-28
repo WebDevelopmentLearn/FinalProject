@@ -42,22 +42,22 @@ nav {
 
   #searchInput {
     width: 20vw;
-    border-right: none;
-    outline: none;
     padding: 12px 5px 12px 37px;
+    border-right: none;
     border: 1px solid #d9d9d9;
     border-radius: $borderRadius8x 0 0 $borderRadius8x;
+    outline: none;
     font-size: 1.6rem;
   }
 
   #searchCityInput {
     width: 20vw;
-    border-right: none;
-    outline: none;
     padding: 12px 20px;
+    border-right: none;
     border: 1px solid #d9d9d9;
     border-left: none;
     border-right: none;
+    outline: none;
     font-size: 1.6rem;
   }
 
@@ -66,19 +66,19 @@ nav {
   }
 
   #searchIcon {
+    padding-left: 10px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    padding-left: 10px;
   }
 
   .searchBtn {
     width: 45px;
     height: 45px;
+    background-color: #f65858;
     border: none;
     border-radius: 0 $borderRadius8x $borderRadius8x 0;
-    background-color: #f65858;
   }
 }
 
@@ -91,26 +91,26 @@ nav {
   gap: 21px;
 
   .switchLangBtn {
+    @include flexBox(row, center, center);
     background-color: $whiteBg;
     border: none;
-    @include flexBox(row, center, center);
     gap: 4px;
     font-size: 1.4rem;
   }
 
   a {
-    text-decoration: none;
-    color: #000000;
     font-size: 1.4rem;
+    color: #000000;
+    text-decoration: none;
   }
 
   .signUpBtn {
     background-color: $aquaBlueBg;
-    color: $whiteFont;
-    border: none;
     padding: 8px 16px;
+    border: none;
     border-radius: $borderRadius8x;
     font-size: 1.4rem;
+    color: $whiteFont;
   }
 }
 /* ======= RIGHT CONTAINER END ======= */
@@ -129,11 +129,10 @@ footer {
 
 .footerInfoContainer {
   @include flexBox(row, start, center);
-  //flex-wrap: wrap;
-  gap: 16px;
   width: $width100;
   padding-bottom: 25px;
   border-bottom: 1px solid #707070;
+  gap: 16px;
 
   h4 {
     font-size: 1.6rem;
@@ -141,19 +140,18 @@ footer {
   }
 
   button {
+    background-color: transparent;
+    padding: 10px 25px 10px 14px;
     border-radius: 6px;
     border: 2px solid $whiteFont;
     color: $whiteFont;
-    background-color: transparent;
-    padding: 10px 25px 10px 14px;
-    //margin-bottom: 25px;
   }
 }
 
 .footerLinksContainer {
   @include flexBox(row, start, start);
   margin-top: 24px;
-  //flex-wrap: wrap;
+
   div {
     @include flexBox(column, start, start);
     width: 100%;
@@ -164,9 +162,9 @@ footer {
     }
 
     a {
-      text-decoration: none;
       font-size: 1.4rem;
       color: #C5C4C4;
+      text-decoration: none;
     }
   }
 }
@@ -202,7 +200,6 @@ footer {
 
 .footerAdditionInfoContainer {
   @include flexBox(row, start, center);
-
   flex-wrap: wrap;
   gap: 24px;
   p {
@@ -211,9 +208,9 @@ footer {
   }
 
   a {
-    text-decoration: none;
     font-size: 1.4rem;
     color: #C5C4C4;
+    text-decoration: none;
   }
 }
 

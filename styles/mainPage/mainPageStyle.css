@@ -18,7 +18,7 @@
   font-weight: 900;
 }
 
-/* ================ START OF MAIN PAGE ==================== */
+/* ================ START OF MAIN ==================== */
 main {
   display: flex;
   flex-direction: column;
@@ -36,16 +36,16 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 45px;
   margin-bottom: 80px;
+  gap: 45px;
 }
 .aboutUsContainer .aboutUsInfoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 24px;
   width: 50%;
+  gap: 24px;
 }
 .aboutUsContainer .aboutUsInfoContainer h1 {
   font-size: 4.2rem;
@@ -56,11 +56,11 @@ main {
 }
 .aboutUsContainer .aboutUsInfoContainer a {
   background-color: #00798a;
-  color: #ffffff;
-  text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 1.6rem;
+  color: #ffffff;
+  text-decoration: none;
   text-align: center;
 }
 
@@ -85,24 +85,24 @@ main {
   font-size: 2.8rem;
 }
 .eventsContainer .leftEventContainer button {
-  background-color: rgba(151, 202, 209, 0.1215686275);
-  border: none;
-  border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  background-color: rgba(151, 202, 209, 0.1215686275);
   padding: 12px 12px 8px 12px;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
 }
 .eventsContainer .leftEventContainer button span {
   font-size: 2rem;
   color: #00798a;
 }
 .eventsContainer .seeAllEventsContainer a {
-  text-decoration: none;
   font-size: 1.6rem;
   color: #00798a;
+  text-decoration: none;
 }
 
 /* ======= EVENTS CONTAINER END ======= */
@@ -117,15 +117,15 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: normal;
-  flex-wrap: wrap;
-  gap: 36px;
   width: 100%;
+  flex-wrap: wrap;
   margin-top: 24px;
+  gap: 36px;
 }
 .nearEventsContainer div, .upcomingEventsContainer div {
-  padding-bottom: 10px;
   max-width: 272px;
   max-height: 400px;
+  padding-bottom: 10px;
 }
 .nearEventsContainer hr, .upcomingEventsContainer hr {
   display: none;
@@ -189,13 +189,13 @@ main {
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
 /* ======= JOIN CONTAINER START ======= */
 .joinContainer {
-  width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  column-gap: 20px;
+  width: 100%;
   background-color: rgba(151, 202, 209, 0.0784313725);
-  border-radius: 8px;
   padding: 16px 56px;
+  border-radius: 8px;
+  column-gap: 20px;
 }
 .joinContainer #joinImg {
   grid-row-start: 1;
@@ -209,27 +209,27 @@ main {
   font-size: 2.8rem;
 }
 .joinContainer p {
-  font-size: 1.6rem;
-  line-height: 24px;
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 1;
+  font-size: 1.6rem;
+  line-height: 24px;
 }
 .joinContainer a {
   width: 192px;
   height: 40px;
-  border: none;
   background-color: #E32359;
-  color: #ffffff;
-  padding: 8px 66px;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
+  padding: 8px 66px;
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 1;
   font-size: 1.6rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* ======= JOIN CONTAINER END ======= */
@@ -240,8 +240,8 @@ main {
   margin-bottom: 24px;
 }
 .topCategoriesContainer h2 {
-  font-size: 2.8rem;
   margin-bottom: 24px;
+  font-size: 2.8rem;
 }
 
 .topCategoriesList {
@@ -253,16 +253,16 @@ main {
   gap: 16px;
 }
 .topCategoriesList div {
-  width: 135px;
-  height: 112px;
-  background-color: rgba(151, 202, 209, 0.0784313725);
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  width: 135px;
+  height: 112px;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  border-radius: 8px;
   padding: 16px;
+  gap: 6px;
 }
 .topCategoriesList div p {
   font-size: 1.6rem;
@@ -276,8 +276,8 @@ main {
   margin-top: 24px;
 }
 .popularCitiesContainer h2 {
-  font-size: 2.8rem;
   margin-bottom: 24px;
+  font-size: 2.8rem;
 }
 .popularCitiesContainer p {
   font-size: 1.6rem;
@@ -312,8 +312,8 @@ main {
   margin-top: 24px;
 }
 .howMeetWorksContainer h2 {
-  font-size: 2.8rem;
   margin-bottom: 24px;
+  font-size: 2.8rem;
 }
 
 .howMeetWorksList {
@@ -328,11 +328,11 @@ main {
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  gap: 24px;
   background-color: rgba(151, 202, 209, 0.0784313725);
+  width: 580px;
   border-radius: 8px;
   padding: 32px 24px;
-  width: 580px;
+  gap: 24px;
 }
 .howMeetWorksList .howMeetWorksImgContainer {
   display: flex;
@@ -345,8 +345,8 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 16px;
   max-width: 380px;
+  gap: 16px;
 }
 .howMeetWorksList .howMeetWorksInfoContainer h4 {
   font-size: 2rem;
@@ -356,8 +356,8 @@ main {
 }
 .howMeetWorksList .howMeetWorksInfoContainer a {
   font-size: 1.6rem;
-  text-decoration: none;
   color: #00798a;
+  text-decoration: none;
 }
 
 /* ======= HOW MEET WORKS CONTAINER END ======= */
@@ -386,20 +386,20 @@ main {
   justify-content: center;
   align-items: normal;
   flex-wrap: wrap;
-  gap: 32px;
   margin-bottom: 24px;
+  gap: 32px;
 }
 .friendshipsFeaturesList div {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 12px;
   max-width: 376px;
+  gap: 12px;
 }
 .friendshipsFeaturesList div img {
-  margin-bottom: 12px;
   width: 100%;
+  margin-bottom: 12px;
 }
 .friendshipsFeaturesList div h4 {
   font-size: 1.8rem;
@@ -410,13 +410,13 @@ main {
   line-height: 24px;
 }
 .friendshipsFeaturesList div a {
-  font-size: 1.6rem;
   margin-top: 4px;
-  text-decoration: none;
+  font-size: 1.6rem;
   color: #00798a;
+  text-decoration: none;
 }
 
 /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
-/* ================ END OF MAIN PAGE ==================== */
+/* ================ END OF MAIN ==================== */
 
 /*# sourceMappingURL=mainPageStyle.css.map */

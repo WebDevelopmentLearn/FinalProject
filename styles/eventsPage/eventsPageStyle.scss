@@ -11,16 +11,16 @@ main {
 
 .eventMainContainer {
   @include flexBox(row, space-between, start);
-  margin-top: 78px;
   width: $width100;
+  margin-top: 78px;
   gap: 5px;
   div {
     .eventsHeader2Container {
       width: max-content;
       margin-bottom: 12px;
       #eventsHeader2 {
-        color: $aquaBlueFont;
         border-bottom: 4px solid $aquaBlueFont;
+        color: $aquaBlueFont;
       }
     }
   }
@@ -36,21 +36,20 @@ main {
 /* ======= FILTERS START ======= */
 
 .selectMenu {
-  z-index: 1;
-  flex: 0 0 auto;
-  position: relative;
   width: 150px;
   height: 40px;
   background-color: #F6F7F8;
   border-radius: 40px;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
   transition: border-radius 0.5s;
-  font-weight: 500;
   font-size: 1.4rem;
+  font-weight: 500;
   &[data-state="active"] {
     border-radius: 20px 20px 0 0;
 
     .selectMenuEventTitle {
-
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
       }
@@ -65,8 +64,8 @@ main {
     }
 
     .__select__label + .__select__input + .__select__label {
-      background-color: #F6F7F8;
       max-height: 40px;
+      background-color: #F6F7F8;
       border-top-width: 1px;
     }
   }
@@ -83,15 +82,15 @@ main {
   position: relative;
   &::before,
   &::after {
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #333333;
     content: "";
     position: absolute;
     top: 50%;
     right: 16px;
-    display: block;
-    width: 10px;
-    height: 2px;
     transition: all 0.3s ease-out;
-    background-color: #333333;
     transform: translate(-3px, -50%) rotate(45deg);
   }
   &::after {
@@ -101,19 +100,19 @@ main {
 }
 
 .selectMenuEventContent {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   background-color: $whiteBg;
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  transition: all 0.3s ease-out;
-  opacity: 0;
+  position: absolute;
   z-index: 8;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
 .__select__input {
@@ -134,9 +133,9 @@ main {
   height: 40px;
   max-height: 0;
   padding: 0 16px;
-  transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.2s ease-out;
   & + input + & {
     border-top: 0 solid #C7CCD160;
   }
@@ -168,10 +167,10 @@ main {
 /* ======= EVENTS LIST START ======= */
 .eventsList {
   @include flexBox(column, normal, normal);
-  gap: 20px;
   width: 80%;
   margin-top: 24px;
   margin-bottom: 36px;
+  gap: 20px;
   .border {
     border: 1px solid #D9D9D9;
   }
@@ -179,10 +178,10 @@ main {
   .eventContainer {
     @include flexBox(row, normal, normal);
     max-width: 100%;
-    gap: 12px;
-    padding-bottom: 10px;
     max-height: 400px;
+    padding-bottom: 10px;
     margin-top: 16px;
+    gap: 12px;
 
     .eventImageContainer {
       position: relative;
@@ -195,14 +194,13 @@ main {
     }
 
     .eventBadge {
+      width: max-content;
+      background-color: $whiteBg;
+      padding: 2px 8px;
+      border-radius: 4px;
       position: absolute;
       top: 8px;
       left: 8px;
-      width: max-content;
-      padding: 2px 8px;
-      border-radius: 4px;
-
-      background-color: $whiteBg;
       //display: none;
       .eventBadgeType {
         color: $grayFont;
@@ -223,8 +221,8 @@ main {
 
     .eventInfoContainer {
       @include flexBox(column, start, start);
-      gap: 4px;
       max-width: 100%;
+      gap: 4px;
 
       .eventDateInfo {
         font-size: 1.4rem;
@@ -244,8 +242,8 @@ main {
       }
 
       .eventAttendees {
-        font-size: 1.4rem;
         margin-top: 28px;
+        font-size: 1.4rem;
         &:after {
           content: " attendees";
         }
@@ -255,8 +253,5 @@ main {
   }
 
 }
-
-
-
 /* ======= EVENTS LIST END ======= */
 /* ================ END OF MAIN PAGE ==================== */
