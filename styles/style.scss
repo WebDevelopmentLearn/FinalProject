@@ -20,8 +20,12 @@ button {
 /* ================ START OF NAV ==================== */
 
 nav {
-  @include flexBox(row, space-between, center);
+  //@include flexBox(row, space-between, center);
+  display: grid;
+  grid-template-columns: max-content 1fr 2fr;
   margin: 0 24px 24px 24px;
+  grid-gap: 40px;
+
 }
 
 /* ======= LOGO CONTAINER START ======= */
@@ -89,6 +93,7 @@ nav {
 .rightNavContainer {
   @include flexBox(row, space-between, center);
   gap: 21px;
+  justify-self: end;
 
   .switchLangBtn {
     @include flexBox(row, center, center);
