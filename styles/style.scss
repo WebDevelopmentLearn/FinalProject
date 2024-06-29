@@ -20,20 +20,24 @@ button {
 /* ================ START OF NAV ==================== */
 
 nav {
-  //@include flexBox(row, space-between, center);
   display: grid;
   grid-template-columns: max-content 1fr 2fr;
   margin: 0 24px 24px 24px;
   grid-gap: 40px;
-
 }
 
 /* ======= LOGO CONTAINER START ======= */
+.logoContainer {
+  @include flexBox(row, center, center);
+  img {
+    transition: transform 0.5s ease;
 
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
 /* ======= LOGO CONTAINER END ======= */
-
-/* ======= SEARCH CONTAINER START ======= */
-
 
 /* ======= SEARCH CONTAINER START ======= */
 
@@ -52,6 +56,11 @@ nav {
     border-radius: $borderRadius8x 0 0 $borderRadius8x;
     outline: none;
     font-size: 1.6rem;
+    transition: border 0.5s ease;
+
+    &:focus {
+      border: 1px solid #7c7c7c;
+    }
   }
 
   #searchCityInput {
@@ -63,6 +72,11 @@ nav {
     border-right: none;
     outline: none;
     font-size: 1.6rem;
+    transition: border 0.5s ease;
+
+    &:focus {
+      border: 1px solid #7c7c7c;
+    }
   }
 
   .searchLabel {
@@ -83,6 +97,11 @@ nav {
     background-color: #f65858;
     border: none;
     border-radius: 0 $borderRadius8x $borderRadius8x 0;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: #fc3030;
+    }
   }
 }
 
@@ -101,12 +120,24 @@ nav {
     border: none;
     gap: 4px;
     font-size: 1.4rem;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: #02b5d0;
+    }
   }
 
   a {
     font-size: 1.4rem;
     color: #000000;
     text-decoration: none;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: #02b5d0;
+    }
   }
 
   .signUpBtn {
@@ -116,6 +147,12 @@ nav {
     border-radius: $borderRadius8x;
     font-size: 1.4rem;
     color: $whiteFont;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #02b5d0;
+      transform: scale(1.1);
+    }
   }
 }
 /* ======= RIGHT CONTAINER END ======= */
@@ -150,6 +187,16 @@ footer {
     border-radius: 6px;
     border: 2px solid $whiteFont;
     color: $whiteFont;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      //background-color: #02b5d0;
+      background-color: $whiteBg;
+      border: 2px solid #575757;
+      transform: scale(1.1);
+      color: #000000;
+    }
   }
 }
 
@@ -170,6 +217,12 @@ footer {
       font-size: 1.4rem;
       color: #C5C4C4;
       text-decoration: none;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #ffffff;
+        text-shadow: #ffffff 0px 0px 2px;
+      }
     }
   }
 }
@@ -194,12 +247,54 @@ footer {
     margin-top: 12px;
     margin-bottom: 24px;
     gap: 35px;
+
+    a {
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .linkIcon {
+      transition: color 0.5s ease;
+      color: #D9D9D9;
+    }
+
+    #facebook_link:hover .linkIcon {
+      //fill: #6fb1f3;
+      color: #6fb1f3;
+    }
+
+    #twitter_link:hover .linkIcon {
+      color: #1DABDD;
+    }
+
+    #youtube_link:hover .linkIcon {
+      color: #f50d0d;
+    }
+
+    #instagram_link:hover .linkIcon {
+      color: #833ab4ff;
+    }
+
+    #tiktok_link:hover .linkIcon {
+      color: #04917d;
+    }
   }
 
   .downloadsStoresContainer {
     @include flexBox(row, space-between, center);
     gap: 24px;
     margin-bottom: 24px;
+
+    a {
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
@@ -216,6 +311,13 @@ footer {
     font-size: 1.4rem;
     color: #C5C4C4;
     text-decoration: none;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: #ffffff;
+      text-shadow: #ffffff 0px 0px 2px;
+    }
   }
 }
 

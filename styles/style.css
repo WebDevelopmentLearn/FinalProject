@@ -42,8 +42,20 @@ nav {
 }
 
 /* ======= LOGO CONTAINER START ======= */
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logoContainer img {
+  transition: transform 0.5s ease;
+}
+.logoContainer img:hover {
+  transform: scale(1.1);
+}
+
 /* ======= LOGO CONTAINER END ======= */
-/* ======= SEARCH CONTAINER START ======= */
 /* ======= SEARCH CONTAINER START ======= */
 .searchContainer {
   display: flex;
@@ -65,6 +77,10 @@ nav {
   border-radius: 8px 0 0 8px;
   outline: none;
   font-size: 1.6rem;
+  transition: border 0.5s ease;
+}
+.searchContainer #searchInput:focus {
+  border: 1px solid #7c7c7c;
 }
 .searchContainer #searchCityInput {
   width: 20vw;
@@ -75,6 +91,10 @@ nav {
   border-right: none;
   outline: none;
   font-size: 1.6rem;
+  transition: border 0.5s ease;
+}
+.searchContainer #searchCityInput:focus {
+  border: 1px solid #7c7c7c;
 }
 .searchContainer .searchLabel {
   position: relative;
@@ -92,6 +112,10 @@ nav {
   background-color: #f65858;
   border: none;
   border-radius: 0 8px 8px 0;
+  transition: background-color 0.5s ease;
+}
+.searchContainer .searchBtn:hover {
+  background-color: #fc3030;
 }
 
 /* ======= SEARCH CONTAINER END ======= */
@@ -113,11 +137,19 @@ nav {
   border: none;
   gap: 4px;
   font-size: 1.4rem;
+  transition: all 0.5s ease;
+}
+.rightNavContainer .switchLangBtn:hover {
+  color: #02b5d0;
 }
 .rightNavContainer a {
   font-size: 1.4rem;
   color: #000000;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.rightNavContainer a:hover {
+  color: #02b5d0;
 }
 .rightNavContainer .signUpBtn {
   background-color: #00798a;
@@ -126,6 +158,11 @@ nav {
   border-radius: 8px;
   font-size: 1.4rem;
   color: #ffffff;
+  transition: all 0.5s ease;
+}
+.rightNavContainer .signUpBtn:hover {
+  background-color: #02b5d0;
+  transform: scale(1.1);
 }
 
 /* ======= RIGHT CONTAINER END ======= */
@@ -157,6 +194,13 @@ footer {
   border-radius: 6px;
   border: 2px solid #ffffff;
   color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footerInfoContainer button:hover {
+  background-color: #ffffff;
+  border: 2px solid #575757;
+  transform: scale(1.1);
+  color: #000000;
 }
 
 .footerLinksContainer {
@@ -182,6 +226,11 @@ footer {
   font-size: 1.4rem;
   color: #C5C4C4;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.footerLinksContainer div a:hover {
+  color: #ffffff;
+  text-shadow: #ffffff 0px 0px 2px;
 }
 
 .followsLinks {
@@ -211,6 +260,31 @@ footer {
   margin-bottom: 24px;
   gap: 35px;
 }
+.followsLinks .socialPagesContainer a {
+  transition: all 0.5s ease;
+}
+.followsLinks .socialPagesContainer a:hover {
+  transform: scale(1.1);
+}
+.followsLinks .socialPagesContainer .linkIcon {
+  transition: color 0.5s ease;
+  color: #D9D9D9;
+}
+.followsLinks .socialPagesContainer #facebook_link:hover .linkIcon {
+  color: #6fb1f3;
+}
+.followsLinks .socialPagesContainer #twitter_link:hover .linkIcon {
+  color: #1DABDD;
+}
+.followsLinks .socialPagesContainer #youtube_link:hover .linkIcon {
+  color: #f50d0d;
+}
+.followsLinks .socialPagesContainer #instagram_link:hover .linkIcon {
+  color: #833ab4;
+}
+.followsLinks .socialPagesContainer #tiktok_link:hover .linkIcon {
+  color: #04917d;
+}
 .followsLinks .downloadsStoresContainer {
   display: flex;
   flex-direction: row;
@@ -218,6 +292,12 @@ footer {
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
+}
+.followsLinks .downloadsStoresContainer a {
+  transition: all 0.5s ease;
+}
+.followsLinks .downloadsStoresContainer a:hover {
+  transform: scale(1.1);
 }
 
 .footerAdditionInfoContainer {
@@ -236,6 +316,11 @@ footer {
   font-size: 1.4rem;
   color: #C5C4C4;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.footerAdditionInfoContainer a:hover {
+  color: #ffffff;
+  text-shadow: #ffffff 0px 0px 2px;
 }
 
 /* ================ END OF FOOTER ==================== */

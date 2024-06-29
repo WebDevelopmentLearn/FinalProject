@@ -40,6 +40,13 @@ main {
       color: $whiteFont;
       text-decoration: none;
       text-align: center;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #02b5d0;
+        transform: scale(1.1);
+      }
     }
   }
 }
