@@ -85,6 +85,12 @@ main {
       border: none;
       border-radius: $borderRadius8x;
 
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
       span {
         font-size: $fzMedium2;
         color: $aquaBlueFont;
