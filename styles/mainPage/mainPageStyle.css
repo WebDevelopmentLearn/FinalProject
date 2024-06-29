@@ -68,6 +68,12 @@ main {
   background-color: #02b5d0;
   transform: scale(1.1);
 }
+.aboutUsContainer .aboutUsImgContainer img {
+  transition: all 0.5s ease;
+}
+.aboutUsContainer .aboutUsImgContainer img:hover {
+  transform: scale(1.1);
+}
 
 /* ======= ABOUT US CONTAINER END ======= */
 /* ======= EVENTS CONTAINER START ======= */
@@ -108,6 +114,10 @@ main {
   font-size: 1.6rem;
   color: #00798a;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.eventsContainer .seeAllEventsContainer a:hover {
+  color: #02b5d0;
 }
 
 /* ======= EVENTS CONTAINER END ======= */
@@ -131,6 +141,12 @@ main {
   max-width: 272px;
   max-height: 400px;
   padding-bottom: 10px;
+}
+.nearEventsContainer .eventCard, .upcomingEventsContainer .eventCard {
+  transition: all 0.5s ease;
+}
+.nearEventsContainer .eventCard:hover, .upcomingEventsContainer .eventCard:hover {
+  transform: scale(1.1);
 }
 .nearEventsContainer hr, .upcomingEventsContainer hr {
   display: none;
@@ -201,6 +217,10 @@ main {
   padding: 16px 56px;
   border-radius: 8px;
   column-gap: 20px;
+  transition: all 0.5s ease;
+}
+.joinContainer:hover {
+  transform: scale(1.05);
 }
 .joinContainer #joinImg {
   grid-row-start: 1;
@@ -235,6 +255,11 @@ main {
   font-size: 1.6rem;
   color: #ffffff;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.joinContainer a:hover {
+  background-color: #ff004d;
+  transform: scale(1.05);
 }
 
 /* ======= JOIN CONTAINER END ======= */
@@ -268,6 +293,10 @@ main {
   border-radius: 8px;
   padding: 16px;
   gap: 6px;
+  transition: all 0.5s ease;
+}
+.topCategoriesList div:hover {
+  transform: scale(1.1);
 }
 .topCategoriesList div p {
   font-size: 1.6rem;
@@ -304,6 +333,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  transition: all 0.5s ease;
+}
+.popularCitiesList div:hover {
+  transform: scale(1.1);
 }
 .popularCitiesList div p {
   font-size: 2rem;
@@ -338,6 +371,10 @@ main {
   border-radius: 8px;
   padding: 32px 24px;
   gap: 24px;
+  transition: all 0.5s ease;
+}
+.howMeetWorksList .howMeetWorksSubContainer:hover {
+  transform: scale(1.1);
 }
 .howMeetWorksList .howMeetWorksImgContainer {
   display: flex;
@@ -363,6 +400,10 @@ main {
   font-size: 1.6rem;
   color: #00798a;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.howMeetWorksList .howMeetWorksInfoContainer a:hover {
+  color: #02b5d0;
 }
 
 /* ======= HOW MEET WORKS CONTAINER END ======= */
@@ -401,6 +442,10 @@ main {
   align-items: start;
   max-width: 376px;
   gap: 12px;
+  transition: all 0.5s ease;
+}
+.friendshipsFeaturesList div:hover {
+  transform: scale(1.1);
 }
 .friendshipsFeaturesList div img {
   width: 100%;
@@ -419,6 +464,10 @@ main {
   font-size: 1.6rem;
   color: #00798a;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.friendshipsFeaturesList div a:hover {
+  color: #02b5d0;
 }
 
 /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
