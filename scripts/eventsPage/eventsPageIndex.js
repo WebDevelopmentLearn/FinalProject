@@ -21,15 +21,37 @@ function createCards(objArray) {
     })
 }
 
-function createCard(obj) {
-    const eventHr = document.createElement("hr");
-    const eventContainer = document.createElement("div");
-
+function createImageContainer(imageSrc) {
     const eventImageContainer = document.createElement("div");
     const eventImage = document.createElement("img");
+
+    eventImageContainer.classList.add("eventImageContainer");
+    eventImage.classList.add("eventImage");
+
+    eventImage.setAttribute("src", `${imageSrc}`);
+
+    eventImageContainer.append(eventImage);
+    return eventImageContainer;
+}
+
+function createBadge(type) {
     const eventBadge = document.createElement("div");
     const eventBadgeType = document.createElement("p");
 
+    eventBadge.classList.add("eventBadge");
+    eventBadgeType.classList.add("eventBadgeType");
+
+    if (type === "online") {
+        eventBadgeType.textContent = "Online Event";
+    }
+    eventBadge.setAttribute("display", "block");
+    eventBadge.append(eventBadgeType);
+
+    return eventBadge;
+}
+
+
+function createInfoContainer(obj) {
     const eventInfoContainer = document.createElement("div");
     const eventDateInfoPar = document.createElement("p");
     const eventTitleHeader = document.createElement("h4");
@@ -37,39 +59,44 @@ function createCard(obj) {
     const eventType = document.createElement("p");
     const eventAttendees = document.createElement("p");
 
-    eventHr.classList.add("border");
 
-    eventImageContainer.classList.add("eventImageContainer");
-    eventImage.classList.add("eventImage");
-    eventBadge.classList.add("eventBadge");
-    eventBadgeType.classList.add("eventBadgeType");
-
-    eventContainer.classList.add("eventContainer");
     eventInfoContainer.classList.add("eventInfoContainer");
     eventDateInfoPar.classList.add("eventDateInfo", "text500");
     eventTitleHeader.classList.add("eventTitleHeader", "text500");
     eventLocationInfo.classList.add("eventLocationInfo");
     eventType.classList.add("eventType");
     eventAttendees.classList.add("eventAttendees");
+
     eventDateInfoPar.textContent = formatDate(obj.date);
     eventTitleHeader.textContent = obj.title;
     eventLocationInfo.textContent = obj.category;
     if (obj.attendees) {
         eventAttendees.textContent = obj.attendees;
     }
-    eventImage.setAttribute("src", `${obj.image}`);
     eventInfoContainer.append(eventDateInfoPar, eventTitleHeader, eventLocationInfo);
     if (eventAttendees.textContent !== "") {
         eventInfoContainer.append(eventAttendees);
     }
-    eventImageContainer.append(eventImage);
     if (obj.type === "online") {
         eventType.textContent = "Online";
-        eventBadgeType.textContent = "Online Event";
-        eventBadge.setAttribute("display", "block");
-        eventBadge.append(eventBadgeType);
+    }
+
+    return eventInfoContainer;
+}
+
+
+function createCard(obj) {
+    const eventHr = document.createElement("hr");
+    const eventContainer = document.createElement("div");
+    const eventImageContainer = createImageContainer(obj.image);
+    const eventBadge = createBadge(obj.type);
+    const eventInfoContainer = createInfoContainer(obj);
+
+    eventHr.classList.add("border");
+    eventContainer.classList.add("eventContainer");
+
+    if (obj.type === "online") {
         eventImageContainer.append(eventBadge);
-        eventInfoContainer.append(eventType);
     }
 
     eventContainer.append(eventImageContainer, eventInfoContainer);

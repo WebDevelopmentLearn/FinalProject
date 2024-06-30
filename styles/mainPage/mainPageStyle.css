@@ -129,6 +129,7 @@ main {
 .nearEvents {
   margin-top: 24px;
   margin-bottom: 36px;
+  width: 100%;
 }
 
 .nearEventsContainer, .upcomingEventsContainer {
@@ -209,6 +210,7 @@ main {
 /* ======= UPCOMING EVENTS CONTAINER START ======= */
 .upcomingEvents {
   margin-bottom: 24px;
+  width: 100%;
 }
 
 /* ======= UPCOMING EVENTS CONTAINER END ======= */
