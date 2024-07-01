@@ -103,7 +103,6 @@ function createCard(obj) {
     eventsList.append(eventHr, eventContainer);
 }
 
-// console.log(selectedFilters);
 function handleSelectMenu(selectMenu, selectForm) {
     const selectTypeEventTitle = selectMenu.querySelector(".selectMenuEventTitle");
     const selectTypeEventLabels = selectMenu.querySelectorAll(".__select__label");
@@ -124,24 +123,19 @@ function handleSelectMenu(selectMenu, selectForm) {
     });
 
     for (let i = 0; i < selectTypeEventLabels.length; i++) {
-        // console.log(selectTypeEventLabels[i]);
         selectTypeEventLabels[i].addEventListener('click', (evt) => {
             if (evt.target.closest("#selectTypeEvent")) {
-                // console.log(evt.target.textContent);
                 selectedFilters.typeEvent = evt.target.textContent;
                 filterEvents("type", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectDistanceEvent")) {
-                // console.log(evt.target.textContent);
                 selectedFilters.distanceEvent = evt.target.textContent !== "Any distance" ? +evt.target.textContent.split("km")[0] : "Any distance";
                 filterEvents("distance", eventsStore, selectedFilters);
             }
             if (evt.target.closest("#selectCategoryEvent")) {
-                // console.log(evt.target.textContent);
                 selectedFilters.categoryEvent = evt.target.textContent;
                 filterEvents("category", eventsStore, selectedFilters);
             }
-            // console.log(selectedFilters);
             selectTypeEventTitle.textContent = evt.target.textContent;
             selectMenu.setAttribute('data-state', '');
             eventsFiltersContainer.style.paddingBottom = `10px`;
@@ -151,7 +145,6 @@ function handleSelectMenu(selectMenu, selectForm) {
 }
 
 function filterEvents(type, array, filtersObj) {
-    // console.log(array);
     let newArray = [];
 
     switch (type) {
@@ -185,7 +178,6 @@ function filterEvents(type, array, filtersObj) {
             break;
     }
 
-    // console.log("Filtred array: ", newArray);
     createCards(newArray);
 }
 

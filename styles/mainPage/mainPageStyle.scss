@@ -214,7 +214,6 @@ main {
   padding: 16px 56px;
   border-radius: $borderRadius8x;
   column-gap: 20px;
-  //margin-bottom: 64px;
   transition: all 0.5s ease;
 
   &:hover {
@@ -316,7 +315,6 @@ main {
 .popularCitiesContainer {
   width: $width100;
   margin-top: $marginT;
-  //margin-bottom: $marginB;
   h2 {
     margin-bottom: 24px;
     font-size: $fzBig28;
@@ -333,7 +331,6 @@ main {
   flex-wrap: wrap;
   gap: 42px;
   margin-top: 28px;
-  //margin-bottom: 40px;
   div {
     @include flexBox(column, center, center);
     gap: 24px;
@@ -358,7 +355,6 @@ main {
 .howMeetWorksContainer {
   width: $width100;
   margin-top: $marginT;
-  //margin-bottom: 40px;
   h2 {
     margin-bottom: 24px;
     font-size: $fzBig28;

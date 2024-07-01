@@ -164,7 +164,6 @@
   .howMeetWorksList {
     @include flexBox(column, center, center);
     gap: 12px;
-    ////flex-wrap: wrap;
     .howMeetWorksSubContainer {
       width: $width100;
     }
