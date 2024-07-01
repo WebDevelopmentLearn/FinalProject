@@ -13,6 +13,7 @@
     margin-left: 24px;
     grid-row-start: 1;
     grid-column-start: 1;
+    justify-content: start;
   }
   /* ======= LOGO CONTAINER END ======= */
   /* ======= SEARCH CONTAINER START ======= */
