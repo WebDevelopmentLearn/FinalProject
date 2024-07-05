@@ -37,7 +37,7 @@ button {
 nav {
   display: grid;
   grid-template-columns: max-content 1fr 2fr;
-  margin: 0 24px 24px 24px;
+  margin: 11px 24px 24px 24px;
   grid-gap: 40px;
 }
 
